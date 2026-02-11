@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение | JZPMU Academy — Школа перманентного макияжа</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === ЭТАЛОННЫЕ ПЕРЕМЕННЫЕ === */
+        :root {
+            --bg-main: #F2F0EB;
+            --bg-card: #FFFFFF;
+            --bg-dark: #3E3B36;
+            --text-main: #3E3B36;
+            --text-light: #FFFFFF;
+            --text-muted: #8C8681;
+            --border-line: #DBCBBC;
+            --accent: #B09B87;
+            --accent-gold: #C4A76B;
+            --radius-box: 24px;
+            --radius-btn: 100px;
+            --radius-sm: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* === HEADER === */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 0; right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1280px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 12px 30px;
+            border-radius: var(--radius-btn);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 30px rgba(62, 59, 54, 0.06);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-mark {
+            height: 28px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* Десктопный текст-однострочник скрыт */
+        .logo-text--desktop {
+            display: none;
+        }
+
+        /* Divider + двухстрочное название */
+        .logo-divider {
+            width: 1px;
+            height: 30px;
+            background: var(--text-main);
+            opacity: 0.15;
+            flex-shrink: 0;
+        }
+
+        .logo-name-mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .logo-name__primary {
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .logo-name__secondary {
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-menu a {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-main);
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn-pill {
+            padding: 10px 22px;
+            border: 1px solid var(--border-line);
+            border-radius: var(--radius-btn);
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Manrope', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-pill:hover {
+            border-color: var(--text-main);
+            background: var(--text-main);
+            color: #fff;
+        }
+
+        .btn-pill.primary {
+            background: var(--text-main);
+            color: #fff;
+            border-color: var(--text-main);
+        }
+
+        .btn-pill.primary:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .btn-pill.gold {
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent));
+            color: #fff;
+            border: none;
+        }
+
+        .btn-pill.gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 167, 107, 0.3);
+        }
+
+        .btn-pill.outline-light {
+            border-color: rgba(255,255,255,0.5);
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .btn-pill.outline-light:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.8);
+        }
+
+        .btn-icon {
+            padding: 10px;
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .btn-icon:hover {
+            color: var(--text-main);
+        }
+
+        /* === МОБИЛЬНОЕ МЕНЮ === */
+        .mobile-menu-btn {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-line);
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--bg-main);
+            border-color: var(--accent);
+        }
+
+        .mobile-menu-btn span {
+            width: 18px;
+            height: 2px;
+            background: var(--text-main);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(7px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-7px);
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 999;
+            display: none;
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: var(--bg-card);
+            z-index: 1001;
+            padding: 80px 30px 30px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu-panel.active {
+            right: 0;
+        }
+
+        .mobile-menu-panel nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-menu-panel a {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-main);
+            font-weight: 400;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-line);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-panel a:hover {
+            color: var(--accent);
+            padding-left: 10px;
+        }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-line);
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--text-main);
+        }
+
+        /* === HERO ACADEMY === */
+        .hero-academy {
+            padding-top: 130px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, var(--bg-main) 0%, #EBE9E4 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-academy::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(196, 167, 107, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-academy-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-academy-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-academy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, rgba(196, 167, 107, 0.2), rgba(176, 155, 135, 0.15));
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-gold);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .hero-academy h1 {
+            font-size: 48px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            color: var(--text-main);
+        }
+
+        .hero-academy h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero-academy-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .hero-academy-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-card);
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .hero-feature::before {
+            content: '✓';
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .hero-academy-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-academy-image {
+            position: relative;
+        }
+
+        .hero-academy-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-box);
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .hero-academy-card::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent));
+            border-radius: 20px;
+            opacity: 0.1;
+        }
+
+        .hero-price-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .hero-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 400;
+            color: var(--text-main);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .hero-price-sub {
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
+
+        .hero-price-includes {
+            border-top: 1px solid var(--border-line);
+            padding-top: 25px;
+        }
+
+        .hero-price-includes h4 {
+            font-size: 14px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .hero-price-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .hero-price-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* === СЕКЦИИ === */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-header.left {
+            text-align: left;
+        }
+
+        .section-header.left p {
+            margin: 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* === ДЛЯ КОГО === */
+        .for-who {
+            background: var(--bg-card);
+            border-radius: 40px;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .for-who::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(196, 167, 107, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .for-who-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .for-who h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .for-who-text {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .for-who-text strong {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .professions-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .profession-tag {
+            padding: 12px 20px;
+            background: var(--bg-main);
+            border-radius: 50px;
+            font-size: 13px;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+        }
+
+        .profession-tag:hover {
+            background: linear-gradient(135deg, rgba(196, 167, 107, 0.2), rgba(176, 155, 135, 0.15));
+            color: var(--accent-gold);
+        }
+
+        /* === ЭТАПЫ ОБУЧЕНИЯ === */
+        .stages-section {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4a4640 100%);
+            border-radius: 40px;
+            padding: 80px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stages-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(196, 167, 107, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .stages-section .section-header h2 {
+            color: white;
+        }
+
+        .stages-section .section-header p {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stage-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-box);
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .stage-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .stage-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .stage-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .stage-card p {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .stage-duration {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-gold);
+        }
+
+        /* === ПРОГРАММА ПО ДНЯМ === */
+        .program-section {
+            background: var(--bg-card);
+        }
+
+        .days-timeline {
+            position: relative;
+        }
+
+        .days-timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-line);
+        }
+
+        .day-item {
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .day-number {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-main);
+            border: 2px solid var(--border-line);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .day-item:hover .day-number {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: white;
+        }
+
+        .day-content {
+            background: var(--bg-main);
+            border-radius: var(--radius-sm);
+            padding: 25px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .day-item:hover .day-content {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .day-content h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+        }
+
+        .day-content p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .day-content ul {
+            margin-top: 10px;
+        }
+
+        .day-content ul li {
+            font-size: 13px;
+            color: var(--text-muted);
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .day-content ul li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .day-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, rgba(196, 167, 107, 0.15), rgba(176, 155, 135, 0.1));
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            color: var(--accent-gold);
+            margin-top: 12px;
+            font-weight: 500;
+        }
+
+        /* === ПРЕПОДАВАТЕЛИ === */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .teacher-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-box);
+            padding: 35px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .teacher-card.featured {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4a4640 100%);
+            color: white;
+            grid-row: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .teacher-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--border-line), var(--accent));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: white;
+        }
+
+        .teacher-card.featured .teacher-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent));
+            font-size: 42px;
+        }
+
+        .teacher-role {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(176, 155, 135, 0.15);
+            border-radius: 50px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .teacher-card.featured .teacher-role {
+            background: rgba(196, 167, 107, 0.3);
+            color: var(--accent-gold);
+        }
+
+        .teacher-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .teacher-card.featured h3 {
+            color: white;
+            font-size: 28px;
+        }
+
+        .teacher-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .teacher-card.featured p {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* === БОНУСЫ === */
+        .bonuses-section {
+            background: var(--bg-card);
+            border-radius: 40px;
+            padding: 80px;
+        }
+
+        .bonuses-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .bonus-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: var(--bg-main);
+            border-radius: var(--radius-sm);
+            transition: all 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            background: linear-gradient(135deg, rgba(196, 167, 107, 0.1), rgba(176, 155, 135, 0.05));
+        }
+
+        .bonus-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .bonus-content h4 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+        }
+
+        .bonus-content p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* === ДРУГИЕ КУРСЫ === */
+        .other-courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-box);
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            border-color: var(--accent);
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(176, 155, 135, 0.15);
+            border-radius: 20px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+
+        .course-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-line);
+        }
+
+        .course-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--accent);
+        }
+
+        .course-arrow {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border-line);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover .course-arrow {
+            background: var(--text-main);
+            border-color: var(--text-main);
+            color: white;
+        }
+
+        /* === CTA СЕКЦИЯ === */
+        .cta-section {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #4a4640 100%);
+            border-radius: 40px;
+            padding: 80px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before,
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(196, 167, 107, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-section::before {
+            top: -200px;
+            left: -100px;
+        }
+
+        .cta-section::after {
+            bottom: -200px;
+            right: -100px;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-contact {
+            margin-top: 40px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-contact a {
+            color: var(--accent-gold);
+        }
+
+        /* === ФОРМА ЗАЯВКИ === */
+        .application-section {
+            background: var(--bg-card);
+            border-radius: 40px;
+            padding: 80px;
+        }
+
+        .application-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .application-info h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .application-info p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .application-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .application-benefit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .application-benefit::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, rgba(196, 167, 107, 0.2), rgba(176, 155, 135, 0.15));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .application-form {
+            background: var(--bg-main);
+            border-radius: var(--radius-box);
+            padding: 40px;
+        }
+
+        .application-form h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid var(--border-line);
+            border-radius: var(--radius-sm);
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            background: var(--bg-card);
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--text-main);
+            color: white;
+            border: none;
+            border-radius: var(--radius-btn);
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .form-submit:hover {
+            background: var(--accent);
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--border-line);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            max-width: 280px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-line);
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border-line);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .footer-socials a:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+        }
+
+        /* === КНОПКА НАВЕРХ === */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--text-main);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 998;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1024px) {
+            .hero-academy-layout {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-academy h1 {
+                font-size: 38px;
+            }
+
+            .for-who-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .stages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .teachers-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .teacher-card.featured {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+
+            .bonuses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .other-courses-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .application-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            /* Логотип: уменьшаем на мобайле */
+            .logo-divider {
+                height: 24px;
+            }
+
+            .logo-name__primary,
+            .logo-name__secondary {
+                font-size: 8.5px;
+            }
+
+            /* Скрыть TG и «Записаться» из шапки на мобайле */
+            .nav-tg,
+            .nav-book {
+                display: none !important;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .for-who,
+            .bonuses-section,
+            .application-section,
+            .stages-section,
+            .cta-section {
+                padding: 50px 30px;
+                border-radius: 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-academy h1 {
+                font-size: 32px;
+            }
+
+            .stages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-card.featured {
+                grid-column: span 1;
+            }
+
+            .other-courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+
+        /* === STICKY-БАР === */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1100;
+            background: rgba(242, 240, 235, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(62, 59, 54, 0.08);
+            padding: 10px 20px max(14px, env(safe-area-inset-bottom));
+            transform: translateY(110%);
+            opacity: 0;
+            transition:
+                transform 0.4s cubic-bezier(0.32, 0, 0.15, 1),
+                opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .sticky-bar.is-visible {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sticky-bar__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            height: 44px;
+        }
+
+        .sticky-tg {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-main);
+            flex-shrink: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .sticky-tg__circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border-line);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--text-main);
+        }
+
+        .sticky-tg__circle svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .sticky-tg__text {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .sticky-tg__label {
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-main);
+        }
+
+        .sticky-tg__sub {
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 300;
+            color: var(--text-muted);
+        }
+
+        .sticky-btn-book {
+            font-family: inherit;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: var(--text-main);
+            color: var(--bg-main);
+            border: none;
+            border-radius: 28px;
+            padding: 0 24px;
+            height: 44px;
+            cursor: pointer;
+            white-space: nowrap;
+            flex-shrink: 0;
+            -webkit-tap-highlight-color: transparent;
+            transition: opacity 0.2s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .sticky-btn-book:active {
+            opacity: 0.75;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="./logo.svg" alt="PMU School & Studio" class="logo-mark">
+                <!-- Десктоп: одна строка -->
+                <div class="logo-text logo-text--desktop">PMU School & Studio</div>
+                <!-- Мобайл: divider + две строки -->
+                <div class="logo-divider"></div>
+                <div class="logo-name-mobile">
+                    <span class="logo-name__primary">PMU School</span>
+                    <span class="logo-name__secondary">&amp; Studio</span>
+                </div>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html#services">Услуги</a>
+                <a href="index.html#masters">Мастера</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="#" class="active">Обучение</a>
+                <a href="index.html#contacts">Контакты</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="https://t.me/jzpmu" class="btn-icon nav-tg" target="_blank">Tg</a>
+                <a href="#application" class="btn-pill primary nav-book">Записаться на курс</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- STICKY-БАР (мобайл) -->
+    <div class="sticky-bar" id="sticky-bar" aria-hidden="true">
+        <div class="sticky-bar__inner">
+            <a href="https://t.me/jzpmu" class="sticky-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+                <div class="sticky-tg__circle">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.674-.544.838-1.103.52l-3.04-2.24-1.467 1.412c-.162.162-.298.298-.612.298l.218-3.092 5.632-5.09c.245-.218-.054-.338-.38-.12L7.24 14.48l-3.01-.94c-.654-.204-.667-.654.137-.97l11.73-4.524c.544-.196 1.02.12.844.97z"/>
+                    </svg>
+                </div>
+                <div class="sticky-tg__text">
+                    <span class="sticky-tg__label">Telegram</span>
+                    <span class="sticky-tg__sub">Написать нам</span>
+                </div>
+            </a>
+            <a href="#application" class="sticky-btn-book">Записаться</a>
+        </div>
+    </div>
+
+    <!-- МОБИЛЬНОЕ МЕНЮ -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+        <nav>
+            <a href="index.html#services">Услуги</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="#stages">Обучение</a>
+            <a href="index.html#contacts">Контакты</a>
+            <a href="https://t.me/jzpmu" target="_blank">Telegram</a>
+        </nav>
+    </div>
+
+    <!-- КНОПКА НАВЕРХ -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+    <!-- HERO ОБУЧЕНИЕ -->
+    <section class="hero-academy">
+        <div class="container">
+            <div class="hero-academy-layout">
+                <div class="hero-academy-content">
+                    <div class="hero-academy-badge">🎓 Академия JZPMU</div>
+                    <h1>Освой профессию мастера <span>перманентного макияжа</span></h1>
+                    <p class="hero-academy-subtitle">
+                        Доход от 100 000 ₽/мес, свободный график, востребованная профессия. 
+                        Никаких специальных навыков не требуется — научим всему с нуля.
+                    </p>
+
+                    <div class="hero-academy-features">
+                        <div class="hero-feature">Стартовый набор в подарок</div>
+                        <div class="hero-feature">Оплачиваемая стажировка</div>
+                        <div class="hero-feature">Трудоустройство в студии</div>
+                        <div class="hero-feature">Бессрочная поддержка</div>
+                        <div class="hero-feature">Оплата долями и рассрочка</div>
+                    </div>
+
+                    <div class="hero-academy-buttons">
+                        <a href="#application" class="btn-pill gold">Записаться на курс</a>
+                        <a href="#" class="btn-pill outline-light">Оплатить курс</a>
+                        <a href="#" class="btn-pill outline-light">Оплатить в рассрочку</a>
+                        <a href="#program" class="btn-pill outline-light">Смотреть программу</a>
+                    </div>
+                </div>
+
+                <div class="hero-academy-image">
+                    <div class="hero-academy-card">
+                        <div class="hero-price-label">Базовый курс «С нуля до профи»</div>
+                        <div class="hero-price">155 000 ₽</div>
+                        <div class="hero-price-sub">или от 12 920 ₽/мес в рассрочку. Доступна оплата долями.</div>
+
+                        <div class="hero-price-includes">
+                            <h4>Что входит:</h4>
+                            <ul class="hero-price-list">
+                                <li>21 день онлайн-подготовки</li>
+                                <li>8 дней очного обучения</li>
+                                <li>Работа с 7 моделями</li>
+                                <li>Стартовый набор оборудования</li>
+                                <li>10 бонусных курсов</li>
+                                <li>Сертификат и выпускной</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДЛЯ КОГО -->
+    <section id="for-who">
+        <div class="container">
+            <div class="for-who">
+                <div class="for-who-layout">
+                    <div class="for-who-content">
+                        <span class="section-label">Для кого этот курс</span>
+                        <h2>К нам приходят из разных профессий</h2>
+                        <p class="for-who-text">
+                            <strong>Не нужно уметь рисовать</strong> или иметь медицинское образование — 
+                            перманентный макияж это бытовая услуга.<br><br>
+                            Всё, что от вас требуется — <strong>желание освоить новую профессию</strong> 
+                            и применять полученные знания.
+                        </p>
+                    </div>
+
+                    <div class="professions-cloud">
+                        <span class="profession-tag">медики</span>
+                        <span class="profession-tag">бровисты</span>
+                        <span class="profession-tag">визажисты</span>
+                        <span class="profession-tag">мамы в декрете</span>
+                        <span class="profession-tag">домохозяйки</span>
+                        <span class="profession-tag">нэйл-мастера</span>
+                        <span class="profession-tag">юристы</span>
+                        <span class="profession-tag">швеи</span>
+                        <span class="profession-tag">продавцы</span>
+                        <span class="profession-tag">риэлторы</span>
+                        <span class="profession-tag">учителя</span>
+                        <span class="profession-tag">повара</span>
+                        <span class="profession-tag">кондитеры</span>
+                        <span class="profession-tag">программисты</span>
+                        <span class="profession-tag">художники</span>
+                        <span class="profession-tag">лэшмейкеры</span>
+                        <span class="profession-tag">и многие другие</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЭТАПЫ ОБУЧЕНИЯ -->
+    <section id="stages">
+        <div class="container">
+            <div class="stages-section">
+                <div class="section-header">
+                    <span class="section-label" style="color: var(--accent-gold);">Структура обучения</span>
+                    <h2>Обучение в 4 этапа</h2>
+                    <p>От подписания договора до первых заработанных денег</p>
+                </div>
+
+                <div class="stages-grid">
+                    <div class="stage-card">
+                        <div class="stage-number">1</div>
+                        <h3>Онлайн-подготовка</h3>
+                        <p>Теория в Telegram-канале. Постановка руки на бумаге. Домашние задания с обратной связью от тренера.</p>
+                        <span class="stage-duration">21 день</span>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-number">2</div>
+                        <h3>Очное обучение</h3>
+                        <p>Практика в студии. Работа с 7 моделями под руководством тренера. Изучение техник по всем зонам.</p>
+                        <span class="stage-duration">8 дней</span>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-number">3</div>
+                        <h3>Оплачиваемая стажировка</h3>
+                        <p>Работа с клиентами в присутствии мастера. Наблюдение за работой опытных специалистов.</p>
+                        <span class="stage-duration">до 2 месяцев</span>
+                    </div>
+
+                    <div class="stage-card">
+                        <div class="stage-number">4</div>
+                        <h3>Онлайн-уроки</h3>
+                        <p>10 дополнительных курсов: финансы, нейросети, SMM, продажи, фото, удаление и другое.</p>
+                        <span class="stage-duration">4 месяца доступа</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРОГРАММА ПО ДНЯМ -->
+    <section id="program" class="program-section">
+        <div class="container">
+            <div class="section-header left">
+                <span class="section-label">Подробная программа</span>
+                <h2>8 дней очного обучения</h2>
+                <p>Каждый день — новые знания и практика под руководством тренера</p>
+            </div>
+
+            <div class="days-timeline">
+                <div class="day-item">
+                    <div class="day-number">1</div>
+                    <div class="day-content">
+                        <h4>Старт обучения</h4>
+                        <p>Повторение теории, правильная постановка руки и отработка на искусственной коже.</p>
+                        <div class="day-highlight">🎁 Вручение стартового набора</div>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">2</div>
+                    <div class="day-content">
+                        <h4>Искусственная кожа и эскизы</h4>
+                        <p>Заполнение бровей и губ на искусственной коже, отрисовка эскиза. Введение в пигментологию — как читать этикетки и что содержится в баночке.</p>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">3</div>
+                    <div class="day-content">
+                        <h4>Теория по бровям</h4>
+                        <p>Изучение 4 техник. Полная демонстрация от тренера от начала до конца процедуры.</p>
+                        <ul>
+                            <li>Ваша первая отработка ПМ бровей на модели</li>
+                            <li>Секреты фото и видео контента</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">4</div>
+                    <div class="day-content">
+                        <h4>Практика: брови</h4>
+                        <p>Две отработки на моделях в зоне бровей под руководством тренера. На каждой модели подбирается индивидуальная техника — вы отработаете разные подходы.</p>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">5</div>
+                    <div class="day-content">
+                        <h4>Теория по губам</h4>
+                        <p>Изучение 4 техник губ. Полная демонстрация от тренера от начала до конца процедуры.</p>
+                        <ul>
+                            <li>Ваша первая отработка ПМ губ на модели</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">6</div>
+                    <div class="day-content">
+                        <h4>Практика: губы</h4>
+                        <p>Две отработки на моделях в зоне губ под руководством тренера. Индивидуальная подборка техник для каждой модели.</p>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">7</div>
+                    <div class="day-content">
+                        <h4>Закрепление навыков</h4>
+                        <p>Отработка на моделях в зонах губ и бровей. Помощь тренера постепенно сокращается — вы учитесь работать самостоятельно.</p>
+                    </div>
+                </div>
+
+                <div class="day-item">
+                    <div class="day-number">8</div>
+                    <div class="day-content">
+                        <h4>Межресничка и выпускной</h4>
+                        <p>Теория по межресничному пространству. Демонстрация и отработка на модели.</p>
+                        <ul>
+                            <li>Блок о развитии и продвижении в соцсетях</li>
+                            <li>Индивидуальная фотосессия для вашего контента</li>
+                        </ul>
+                        <div class="day-highlight">🎓 Экзамен, сертификат, торжественный фуршет</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРЕПОДАВАТЕЛИ -->
+    <section id="teachers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Команда</span>
+                <h2>Ваши преподаватели</h2>
+                <p>Практики, которые делятся реальным опытом</p>
+            </div>
+
+            <div class="teachers-grid">
+                <div class="teacher-card featured">
+                    <div class="teacher-avatar">Ю</div>
+                    <div class="teacher-role">Топ мастер-тренер</div>
+                    <h3>Юлия Заматаева</h3>
+                    <p>Основатель студии и школы JZPMU. 7+ лет в перманентном макияже. Авторские техники, обучила более 100 мастеров. Ведёт основную программу курса.</p>
+                </div>
+
+                <div class="teacher-card">
+                    <div class="teacher-avatar">Ф</div>
+                    <div class="teacher-role">Бизнес-тренер</div>
+                    <h3>Филипп Заматаев</h3>
+                    <p>Специалист по финансовой грамотности и инструментам ведения бизнеса. Научит считать деньги и строить прибыльную практику.</p>
+                </div>
+
+                <div class="teacher-card">
+                    <div class="teacher-avatar">В</div>
+                    <div class="teacher-role">SMM-специалист</div>
+                    <h3>Вероника Маткова</h3>
+                    <p>Специалист по продвижению и продажам. Поможет оформить соцсети, создать контент и найти первых клиентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БОНУСЫ -->
+    <section id="bonuses">
+        <div class="container">
+            <div class="bonuses-section">
+                <div class="section-header left">
+                    <span class="section-label">Входит в стоимость</span>
+                    <h2>10 бонусных курсов</h2>
+                    <p>Всё, что нужно для успешного старта — без дополнительных трат на повышение квалификации</p>
+                </div>
+
+                <div class="bonuses-grid">
+                    <div class="bonus-card">
+                        <div class="bonus-icon">💰</div>
+                        <div class="bonus-content">
+                            <h4>Финансовое планирование</h4>
+                            <p>Как считать доход, расходы и строить прибыльную практику</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🤖</div>
+                        <div class="bonus-content">
+                            <h4>Работа с нейросетями</h4>
+                            <p>Современные инструменты для создания контента и работы</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🎯</div>
+                        <div class="bonus-content">
+                            <h4>Каналы привлечения клиентов</h4>
+                            <p>Где и как находить клиентов с первых дней работы</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">📱</div>
+                        <div class="bonus-content">
+                            <h4>Продвижение в соцсетях</h4>
+                            <p>SMM для мастера: что постить, как вести аккаунт</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">💬</div>
+                        <div class="bonus-content">
+                            <h4>Продажи</h4>
+                            <p>Как общаться с клиентами и закрывать на процедуры</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">📸</div>
+                        <div class="bonus-content">
+                            <h4>Фото и видео съёмка</h4>
+                            <p>Создание портфолио, которое продаёт ваши услуги</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">📋</div>
+                        <div class="bonus-content">
+                            <h4>Работа в рамках закона</h4>
+                            <p>Юридические аспекты: договоры, налоги, ИП/самозанятость</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">✕</div>
+                        <div class="bonus-content">
+                            <h4>Удаление ремувером</h4>
+                            <p>Как исправлять чужие ошибки и удалять нежелательный пигмент</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🎨</div>
+                        <div class="bonus-content">
+                            <h4>Перекрытие пигмента</h4>
+                            <p>Работа со сложными случаями и коррекция цвета</p>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <div class="bonus-icon">🧪</div>
+                        <div class="bonus-content">
+                            <h4>Пигментология</h4>
+                            <p>Глубокое понимание пигментов, их поведения и выбора</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДРУГИЕ КУРСЫ -->
+    <section id="other-courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Другие программы</span>
+                <h2>Выберите своё направление</h2>
+                <p>Курсы для начинающих и практикующих мастеров</p>
+            </div>
+
+            <div class="other-courses-grid">
+                <div class="course-card">
+                    <div class="course-tag">Для мастеров</div>
+                    <h3>Повышение квалификации</h3>
+                    <p>Для тех, кто уже имеет опыт в ПМ и хочет улучшить качество работы. Новые техники, работа со сложной кожей.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 37 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">Требуется мед. образование</div>
+                    <h3>Обучение пирсингу</h3>
+                    <p>Все премудрости профессии от практикующего мастера. Безопасность, техники, работа с клиентами.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 15 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">С нуля</div>
+                    <h3>Базовый курс по тату</h3>
+                    <p>Основы композиции, анатомия кожи, колористика, санитарные нормы, правовые аспекты работы.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 70 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">Удаление</div>
+                    <h3>Курс «Удаление лазером»</h3>
+                    <p>Научим избавляться от нежелательного ПМ, татуажа или микроблейдинга. Работа с оборудованием.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 25 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">Удаление</div>
+                    <h3>Курс «Удаление ремувером»</h3>
+                    <p>Удаление красиво, грамотно и с эффективными результатами для клиентов.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 25 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">Уходовые процедуры</div>
+                    <h3>Ламинирование ресниц</h3>
+                    <p>Популярная услуга с быстрым результатом. Теория и практика на моделях.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 18 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-tag">Уходовые процедуры</div>
+                    <h3>Архитектура бровей</h3>
+                    <p>Архитектура, окрашивание, ламинирование бровей. Комплексный курс для brow-мастера.</p>
+                    <div class="course-footer">
+                        <div class="course-price">от 29 000 ₽</div>
+                        <div class="course-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <h2>Готовы начать новую карьеру?</h2>
+                <p>Запишитесь на бесплатный тест-драйв профессии или сразу займите место на ближайшем потоке</p>
+                
+                <div class="cta-buttons">
+                    <a href="#application" class="btn-pill gold" style="padding: 16px 35px;">Записаться на курс</a>
+                    <a href="#" class="btn-pill outline-light" style="padding: 16px 35px;">Оплатить курс</a>
+                    <a href="https://t.me/jzpmu" class="btn-pill outline-light" style="padding: 16px 35px;" target="_blank">Бесплатная консультация</a>
+                </div>
+
+                <p class="cta-contact">
+                    Остались вопросы? Пишите в <a href="https://t.me/jzpmu" target="_blank">Telegram</a> — с удовольствием ответим!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОРМА ЗАЯВКИ -->
+    <section id="application">
+        <div class="container">
+            <div class="application-section">
+                <div class="application-layout">
+                    <div class="application-info">
+                        <span class="section-label">Запись на обучение</span>
+                        <h2>Оставьте заявку</h2>
+                        <p>Заполните форму, и мы свяжемся с вами для обсуждения деталей, выбора даты старта и оформления договора.</p>
+
+                        <div class="application-benefits">
+                            <div class="application-benefit">Оплата долями и рассрочка без условий</div>
+                            <div class="application-benefit">Рассрочка от банков или внутренняя рассрочка</div>
+                            <div class="application-benefit">Договор и официальный сертификат</div>
+                            <div class="application-benefit">Бессрочная поддержка после обучения</div>
+                            <div class="application-benefit">Возможность трудоустройства в студии</div>
+                        </div>
+                    </div>
+
+                    <div class="application-form">
+                        <h3>Заявка на обучение</h3>
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Имя</label>
+                                    <input type="text" placeholder="Как вас зовут?" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Телефон</label>
+                                    <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="example@mail.ru">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Курс</label>
+                                <select required>
+                                    <option value="">Выберите программу</option>
+                                    <option value="basic">Базовый курс «С нуля до профи» — 155 000 ₽</option>
+                                    <option value="upgrade">Повышение квалификации — от 37 000 ₽</option>
+                                    <option value="piercing">Обучение пирсингу — от 15 000 ₽</option>
+                                    <option value="tattoo">Базовый курс по тату — от 70 000 ₽</option>
+                                    <option value="laser">Удаление лазером — от 25 000 ₽</option>
+                                    <option value="remover">Удаление ремувером — от 25 000 ₽</option>
+                                    <option value="lami">Ламинирование ресниц — от 18 000 ₽</option>
+                                    <option value="brows">Архитектура бровей — от 29 000 ₽</option>
+                                    <option value="consult">Консультация (не знаю, что выбрать)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Комментарий</label>
+                                <textarea placeholder="Расскажите о себе или задайте вопрос"></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">Отправить заявку</button>
+                            <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="./logo.svg" alt="PMU School & Studio" class="logo-mark">
+                        <div class="logo-text">
+                            PMU School & Studio
+                        </div>
+                    </a>
+                    <p>Студия и школа перманентного макияжа. Заботимся о вашей красоте и здоровье с 2017 года.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Обучение</h4>
+                    <ul>
+                        <li><a href="#stages">С нуля до профи</a></li>
+                        <li><a href="#other-courses">Повышение квалификации</a></li>
+                        <li><a href="#other-courses">Курс по пирсингу</a></li>
+                        <li><a href="#other-courses">Курс по тату</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="index.html#services">Перманент бровей</a></li>
+                        <li><a href="index.html#services">Перманент губ</a></li>
+                        <li><a href="index.html#services">Межресничка</a></li>
+                        <li><a href="index.html#services">Удаление</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79956607669">+7 995 660-76-69</a></li>
+                        <li><a href="https://t.me/jzpmu" target="_blank">Telegram</a></li>
+                        <li><a href="https://max.ru/u/f9LHodD0cOLAAaqT882mCdaaWPJ9N4AajNcrzfgKehyu_iHxxquaYCgdXhI" target="_blank">Max</a></li>
+                        <li><a href="https://wa.me/79956607669" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    © 2026 JZPMU. ИП Заматаева Ю.В. · ИНН 668500699202 · ОГРНИП 324665800015670
+                </div>
+                <div class="footer-socials">
+                    <a href="https://t.me/jzpmu" target="_blank">Tg</a>
+                    <a href="https://max.ru/u/f9LHodD0cOLAAaqT882mCdaaWPJ9N4AajNcrzfgKehyu_iHxxquaYCgdXhI" target="_blank">Max</a>
+                    <a href="https://wa.me/79956607669" target="_blank">Wa</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky-бар: появляется после прокрутки 200px (только <=1024px)
+        const stickyBar = document.getElementById('sticky-bar');
+        function updateStickyBar() {
+            if (!stickyBar) return;
+            const isMobile = window.innerWidth <= 1024;
+            const scrolledEnough = window.pageYOffset > 200;
+            const show = isMobile && scrolledEnough;
+            stickyBar.classList.toggle('is-visible', show);
+            stickyBar.setAttribute('aria-hidden', String(!show));
+        }
+        window.addEventListener('scroll', updateStickyBar);
+        window.addEventListener('resize', updateStickyBar);
+        updateStickyBar();
+
+        // Кнопка "Наверх"
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMobileMenu() {
+            mobileMenuBtn.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            mobileMenuPanel.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            mobileMenuPanel.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.mobile-menu-panel a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Плавный скролл
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Анимация появления при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stage-card, .teacher-card, .bonus-card, .course-card, .day-item, .profession-tag').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
+            observer.observe(el);
+        });
+    </script>
+
+</body>
+</html>
