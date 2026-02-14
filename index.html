@@ -1804,21 +1804,23 @@
 
         /* --- Кнопка «Для Юлии))» --- */
         .julia-btn {
-            display: block;
-            width: 100%;
+            display: inline-block;
             text-align: center;
-            padding: 10px 20px;
+            padding: 8px 24px;
             background: linear-gradient(135deg, var(--accent-gold), #c9a66b);
             color: #fff;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             text-decoration: none;
-            transition: opacity 0.3s;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            transition: opacity 0.3s, transform 0.3s;
         }
         .julia-btn:hover {
             opacity: 0.85;
+            transform: translateY(-1px);
         }
 
         /* === RESPONSIVE === */
@@ -2102,9 +2104,6 @@
 </head>
 <body>
 
-    <!-- КНОПКА ДЛЯ ЮЛИИ -->
-    <a href="./cirrilic.html" class="julia-btn" target="_blank">Для Юлии))</a>
-
     <!-- HEADER -->
     <header>
         <nav class="navbar">
@@ -2176,6 +2175,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
+            <a href="./cirrilic.html" class="julia-btn" target="_blank">Для Юлии))</a>
             <div class="hero-layout">
                 <div class="hero-content">
                     <div class="hero-badge">Барнаул</div>
