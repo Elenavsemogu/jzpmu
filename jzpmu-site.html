@@ -1580,12 +1580,55 @@
             padding: 4px 10px;
             border-radius: 6px;
             backdrop-filter: blur(4px);
+            z-index: 3;
+            transition: background 0.2s;
         }
         .before-after__technique {
             font-size: 11px;
             color: var(--text-muted);
             text-align: center;
             margin-top: 8px;
+        }
+
+        /* --- Интерактивное сравнение: зажми = до, отпусти = после --- */
+        .photo-toggle {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        .photo-toggle .photo-toggle__before {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            z-index: 1;
+        }
+        .photo-toggle.is-pressed .photo-toggle__before {
+            opacity: 1;
+        }
+        .photo-toggle.is-pressed .before-after__label {
+            background: rgba(180,60,60,0.7);
+        }
+        .photo-toggle__hint {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.5);
+            color: rgba(255,255,255,0.8);
+            font-size: 9px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+            z-index: 3;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .photo-toggle.is-pressed .photo-toggle__hint {
+            opacity: 0;
         }
 
         /* --- Экскурсия: баннер-кнопка --- */
@@ -2635,19 +2678,26 @@
                     <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на бесплатную примерку формы</a>
                 </div>
 
-                <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Результаты работ (до/после):</h4>
+                <h4 style="font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--text-main);">Результаты работ (до/после):</h4>
+                <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 14px;">Зажмите фото, чтобы увидеть «до»</p>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Графика</span>
+                        <img class="photo-toggle__before" src="./photos/brows-grafika-1.jpg" alt="До">
                         <img src="./photos/brows-grafika-2.jpg" alt="Брови — графика">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Мягкая графика</span>
+                        <img class="photo-toggle__before" src="./photos/brows-soft-grafika-2.jpg" alt="До">
                         <img src="./photos/brows-soft-grafika-1.jpg" alt="Брови — мягкая графика">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Четкий низ — мягкий верх</span>
+                        <img class="photo-toggle__before" src="./photos/brows-chetkiy-niz-2.jpg" alt="До">
                         <img src="./photos/brows-chetkiy-niz-1.jpg" alt="Брови — четкий низ мягкий верх">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
                     <div class="before-after__item">
                         <span class="before-after__label">Модельные брови</span>
@@ -2727,30 +2777,35 @@
                 <div class="before-after">
                     <div class="before-after__title">Результат: техника 3D / амбре</div>
                     <div class="before-after__grid">
-                        <div class="before-after__item">
-                            <span class="before-after__label">До</span>
-                            <img src="./lips-before-after-2.jpg" alt="Губы до перманента">
-                        </div>
-                        <div class="before-after__item">
+                        <div class="before-after__item photo-toggle">
                             <span class="before-after__label">После</span>
+                            <img class="photo-toggle__before" src="./lips-before-after-2.jpg" alt="Губы до перманента">
                             <img src="./lips-before-after-1.jpg" alt="Губы после перманента 3D">
+                            <span class="photo-toggle__hint">👆 зажми = до</span>
                         </div>
                     </div>
                 </div>
 
-                <h4 style="font-size: 14px; font-weight: 500; margin-bottom: 14px; color: var(--text-main);">Результаты по техникам:</h4>
+                <h4 style="font-size: 14px; font-weight: 500; margin-bottom: 6px; color: var(--text-main);">Результаты по техникам:</h4>
+                <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 14px;">Зажмите фото, чтобы увидеть «до»</p>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Натуральная</span>
+                        <img class="photo-toggle__before" src="./photos/lips-naturalnaya-2.jpg" alt="До">
                         <img src="./photos/lips-naturalnaya-1.jpg" alt="Губы — натуральная техника">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Акварельная</span>
+                        <img class="photo-toggle__before" src="./photos/lips-akvarelnaya-2.jpg" alt="До">
                         <img src="./photos/lips-akvarelnaya-1.jpg" alt="Губы — акварельная техника">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
-                    <div class="before-after__item">
+                    <div class="before-after__item photo-toggle">
                         <span class="before-after__label">Помадная</span>
+                        <img class="photo-toggle__before" src="./photos/lips-pomadnaya-2.jpg" alt="До">
                         <img src="./photos/lips-pomadnaya-1.jpg" alt="Губы — помадная техника">
+                        <span class="photo-toggle__hint">👆 зажми</span>
                     </div>
                     <div class="before-after__item">
                         <span class="before-after__label">Кока-кола</span>
@@ -3031,6 +3086,18 @@
         window.addEventListener('scroll', updateStickyBar);
         window.addEventListener('resize', updateStickyBar);
         updateStickyBar();
+
+        // === Фото до/после: зажми = до, отпусти = после ===
+        document.querySelectorAll('.photo-toggle').forEach(function(el) {
+            function press() { el.classList.add('is-pressed'); }
+            function release() { el.classList.remove('is-pressed'); }
+            el.addEventListener('mousedown', press);
+            el.addEventListener('mouseup', release);
+            el.addEventListener('mouseleave', release);
+            el.addEventListener('touchstart', function(e) { e.preventDefault(); press(); }, {passive: false});
+            el.addEventListener('touchend', release);
+            el.addEventListener('touchcancel', release);
+        });
 
         // === Экскурсия: модалка-книга ===
         let excCurrentPage = 1;
