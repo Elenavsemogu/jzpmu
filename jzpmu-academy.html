@@ -2483,8 +2483,20 @@
         // === Экскурсия: модалка-книга ===
         let excCurrentPage = 1;
         const excTotalPages = 30;
+        let excImagesLoaded = false;
+        const excImages = [];
+        function preloadExcursion() {
+            if (excImagesLoaded) return;
+            excImagesLoaded = true;
+            for (let i = 1; i <= excTotalPages; i++) {
+                var img = new Image();
+                img.src = './excursion/page-' + String(i).padStart(2, '0') + '.jpg';
+                excImages[i] = img;
+            }
+        }
         function openExcursion() {
             excCurrentPage = 1;
+            preloadExcursion();
             updateExcursionPage();
             document.getElementById('excursionModal').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -2494,11 +2506,13 @@
             document.body.style.overflow = '';
         }
         function excursionNav(dir) {
-            excCurrentPage = Math.max(1, Math.min(excTotalPages, excCurrentPage + dir));
+            var newPage = excCurrentPage + dir;
+            if (newPage < 1 || newPage > excTotalPages) return;
+            excCurrentPage = newPage;
             updateExcursionPage();
         }
         function updateExcursionPage() {
-            const num = String(excCurrentPage).padStart(2, '0');
+            var num = String(excCurrentPage).padStart(2, '0');
             document.getElementById('excursionImg').src = './excursion/page-' + num + '.jpg';
             document.getElementById('excCounter').textContent = excCurrentPage + ' / ' + excTotalPages;
             document.getElementById('excPrev').disabled = excCurrentPage === 1;
@@ -2516,11 +2530,18 @@
         });
         (function() {
             var touchStartX = 0;
+            var touchStartY = 0;
             var modal = document.getElementById('excursionModal');
-            modal.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
+            modal.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            }, {passive: true});
             modal.addEventListener('touchend', function(e) {
-                var diff = e.changedTouches[0].screenX - touchStartX;
-                if (Math.abs(diff) > 50) excursionNav(diff < 0 ? 1 : -1);
+                var diffX = e.changedTouches[0].screenX - touchStartX;
+                var diffY = e.changedTouches[0].screenY - touchStartY;
+                if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+                    excursionNav(diffX < 0 ? 1 : -1);
+                }
             }, {passive: true});
         })();
 
