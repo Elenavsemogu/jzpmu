@@ -1508,6 +1508,254 @@
             margin-bottom: 20px;
         }
 
+        /* --- Техники: аккуратные плашки --- */
+        .techniques-group {
+            margin-bottom: 28px;
+        }
+        .techniques-group__title {
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .techniques-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .techniques-list li {
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 12px;
+            color: var(--text-main);
+            line-height: 1.4;
+            transition: border-color 0.2s;
+        }
+        .techniques-list li:hover {
+            border-color: var(--accent-gold);
+        }
+
+        /* --- До/после --- */
+        .before-after {
+            margin-bottom: 25px;
+        }
+        .before-after__title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 14px;
+            color: var(--text-main);
+        }
+        .before-after__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .before-after__item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .before-after__item img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+        }
+        .before-after__label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+        .before-after__technique {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* --- Экскурсия: баннер-кнопка --- */
+        .excursion-banner {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 30px 0;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .excursion-banner:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        .excursion-banner__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .excursion-banner__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(42,36,32,0.82), rgba(42,36,32,0.6));
+        }
+        .excursion-banner__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px 30px;
+            color: #fff;
+        }
+        .excursion-banner__icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .excursion-banner__heading {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+        .excursion-banner__sub {
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 18px;
+        }
+        .excursion-banner__btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        .excursion-banner:hover .excursion-banner__btn {
+            background: #fff;
+            color: var(--text-main);
+        }
+
+        /* --- Экскурсия: модалка-книга --- */
+        .excursion-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+        }
+        .excursion-modal-overlay.active {
+            display: flex;
+        }
+        .excursion-modal {
+            position: relative;
+            width: 92vw;
+            max-width: 500px;
+            max-height: 88vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .excursion-modal__close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+        .excursion-modal__close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .excursion-modal__viewer {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .excursion-modal__viewer img {
+            max-width: 100%;
+            max-height: 75vh;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .excursion-modal__nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 16px 0 0;
+        }
+        .excursion-modal__nav button {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .excursion-modal__nav button:hover {
+            background: rgba(255,255,255,0.25);
+        }
+        .excursion-modal__nav button:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+        .excursion-modal__counter {
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            font-weight: 400;
+            min-width: 60px;
+            text-align: center;
+        }
+
         /* === RESPONSIVE === */
         @media (max-width: 1024px) {
             .hero-layout {
@@ -2115,6 +2363,20 @@
         </div>
     </section>
 
+    <!-- ЭКСКУРСИЯ ПО ОБУЧЕНИЮ -->
+    <div class="container">
+        <div class="excursion-banner" onclick="openExcursion()">
+            <img class="excursion-banner__bg" src="./excursion/page-10.jpg" alt="">
+            <div class="excursion-banner__overlay"></div>
+            <div class="excursion-banner__content">
+                <span class="excursion-banner__icon">📖</span>
+                <div class="excursion-banner__heading">Как проходит обучение?</div>
+                <div class="excursion-banner__sub">Посмотрите все этапы — от первого дня до выпуска. 30 слайдов с фото и описанием.</div>
+                <span class="excursion-banner__btn">Смотреть экскурсию</span>
+            </div>
+        </div>
+    </div>
+
     <!-- FAQ -->
     <section id="faq">
         <div class="container">
@@ -2321,15 +2583,22 @@
                     Современная техника напыления. Премиум-пигменты, которые не уходят в нежелательные оттенки. Только одноразовые материалы. Результат выглядит как профессиональное окрашивание.
                 </p>
 
-                <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Доступные техники:</h4>
-                <ul style="margin-bottom: 25px; padding-left: 20px;">
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Долговременное окрашивание/Перманент в технике «графика»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Долговременное окрашивание/Перманент в технике «мягкая графика»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Долговременное окрашивание/Перманент в технике «четкий низ мягкий верх»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Долговременное окрашивание/Перманент в технике «модельные брови»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Долговременное окрашивание/Перманент в технике «волоски + напыление»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманентный макияж перекрытие/исправление</li>
-                </ul>
+                <div class="techniques-group">
+                    <div class="techniques-group__title">Долговременное окрашивание / Перманент</div>
+                    <ul class="techniques-list">
+                        <li>Графика</li>
+                        <li>Мягкая графика</li>
+                        <li>Четкий низ — мягкий верх</li>
+                        <li>Модельные брови</li>
+                        <li>Волоски + напыление</li>
+                    </ul>
+                </div>
+                <div class="techniques-group">
+                    <div class="techniques-group__title">Дополнительно</div>
+                    <ul class="techniques-list">
+                        <li>Перекрытие / исправление</li>
+                    </ul>
+                </div>
                 
                 <table class="price-table">
                     <tr>
@@ -2368,10 +2637,13 @@
 
                 <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Результаты работ (до/после):</h4>
                 <!-- TODO: добавить фото результатов работ бровей -->
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+1" style="width: 100%; border-radius: 12px;" alt="Работа 1">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+2" style="width: 100%; border-radius: 12px;" alt="Работа 2">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+3" style="width: 100%; border-radius: 12px;" alt="Работа 3">
+                <div class="before-after__grid">
+                    <div class="before-after__item" style="background: var(--bg-card); border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 12px;">Фото скоро</span>
+                    </div>
+                    <div class="before-after__item" style="background: var(--bg-card); border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 12px;">Фото скоро</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2388,15 +2660,17 @@
                     Акварельная техника, помадный эффект, 3D-объём. Подчёркиваем естественную красоту и природную форму губ.
                 </p>
 
-                <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Доступные техники:</h4>
-                <ul style="margin-bottom: 25px; padding-left: 20px;">
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманент в натуральной технике</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманент в акварельной технике</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманент в помадной технике</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманент в технике «тинт»</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманент в 3D технике/амбре</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Перманентный макияж губ в эксклюзивном цвете кока-кола</li>
-                </ul>
+                <div class="techniques-group">
+                    <div class="techniques-group__title">Техники перманента губ</div>
+                    <ul class="techniques-list">
+                        <li>Натуральная</li>
+                        <li>Акварельная</li>
+                        <li>Помадная</li>
+                        <li>Тинт</li>
+                        <li>3D / амбре</li>
+                        <li>Эксклюзивный цвет кока-кола</li>
+                    </ul>
+                </div>
                 
                 <table class="price-table">
                     <tr>
@@ -2433,10 +2707,18 @@
                     <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на бесплатную примерку формы</a>
                 </div>
 
-                <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Результаты работ (до/после):</h4>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-                    <img src="./lips-before-after-1.jpg" style="width: 100%; border-radius: 12px;" alt="Губы до/после 1">
-                    <img src="./lips-before-after-2.jpg" style="width: 100%; border-radius: 12px;" alt="Губы до/после 2">
+                <div class="before-after">
+                    <div class="before-after__title">Результат: техника 3D / амбре</div>
+                    <div class="before-after__grid">
+                        <div class="before-after__item">
+                            <span class="before-after__label">До</span>
+                            <img src="./lips-before-after-2.jpg" alt="Губы до перманента">
+                        </div>
+                        <div class="before-after__item">
+                            <span class="before-after__label">После</span>
+                            <img src="./lips-before-after-1.jpg" alt="Губы после перманента 3D">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2453,11 +2735,13 @@
                     Заполнение межресничного пространства пигментом. Создаёт эффект густых ресниц без макияжа, делает взгляд выразительнее.
                 </p>
 
-                <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Доступные техники:</h4>
-                <ul style="margin-bottom: 25px; padding-left: 20px;">
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Базовая межресничка</li>
-                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">Пудровая межресничка</li>
-                </ul>
+                <div class="techniques-group">
+                    <div class="techniques-group__title">Техники</div>
+                    <ul class="techniques-list">
+                        <li>Базовая межресничка</li>
+                        <li>Пудровая межресничка</li>
+                    </ul>
+                </div>
                 
                 <table class="price-table">
                     <tr>
@@ -2496,10 +2780,13 @@
 
                 <h4 style="font-size: 16px; font-family: 'Manrope', sans-serif; font-weight: 500; margin-bottom: 15px;">Результаты работ (до/после):</h4>
                 <!-- TODO: добавить фото результатов работ межреснички -->
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+1" style="width: 100%; border-radius: 12px;" alt="Работа 1">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+2" style="width: 100%; border-radius: 12px;" alt="Работа 2">
-                    <img src="https://via.placeholder.com/200x200/F2F0EB/8C8681?text=Работа+3" style="width: 100%; border-radius: 12px;" alt="Работа 3">
+                <div class="before-after__grid">
+                    <div class="before-after__item" style="background: var(--bg-card); border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 12px;">Фото скоро</span>
+                    </div>
+                    <div class="before-after__item" style="background: var(--bg-card); border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: var(--text-muted); font-size: 12px;">Фото скоро</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2677,6 +2964,21 @@
         </div>
     </div>
 
+    <!-- ЭКСКУРСИЯ: модалка-книга -->
+    <div class="excursion-modal-overlay" id="excursionModal">
+        <div class="excursion-modal">
+            <button class="excursion-modal__close" onclick="closeExcursion()">&times;</button>
+            <div class="excursion-modal__viewer">
+                <img id="excursionImg" src="./excursion/page-01.jpg" alt="Экскурсия по обучению">
+            </div>
+            <div class="excursion-modal__nav">
+                <button id="excPrev" onclick="excursionNav(-1)">&#8592;</button>
+                <span class="excursion-modal__counter" id="excCounter">1 / 30</span>
+                <button id="excNext" onclick="excursionNav(1)">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Sticky-бар: появляется после прокрутки 200px (только <=1024px)
         const stickyBar = document.getElementById('sticky-bar');
@@ -2691,6 +2993,53 @@
         window.addEventListener('scroll', updateStickyBar);
         window.addEventListener('resize', updateStickyBar);
         updateStickyBar();
+
+        // === Экскурсия: модалка-книга ===
+        let excCurrentPage = 1;
+        const excTotalPages = 30;
+        function openExcursion() {
+            excCurrentPage = 1;
+            updateExcursionPage();
+            document.getElementById('excursionModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeExcursion() {
+            document.getElementById('excursionModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function excursionNav(dir) {
+            excCurrentPage = Math.max(1, Math.min(excTotalPages, excCurrentPage + dir));
+            updateExcursionPage();
+        }
+        function updateExcursionPage() {
+            const num = String(excCurrentPage).padStart(2, '0');
+            document.getElementById('excursionImg').src = './excursion/page-' + num + '.jpg';
+            document.getElementById('excCounter').textContent = excCurrentPage + ' / ' + excTotalPages;
+            document.getElementById('excPrev').disabled = excCurrentPage === 1;
+            document.getElementById('excNext').disabled = excCurrentPage === excTotalPages;
+        }
+        // Закрытие по клику на оверлей
+        document.getElementById('excursionModal').addEventListener('click', function(e) {
+            if (e.target === this) closeExcursion();
+        });
+        // Клавиатурная навигация
+        document.addEventListener('keydown', function(e) {
+            const modal = document.getElementById('excursionModal');
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeExcursion();
+            if (e.key === 'ArrowRight') excursionNav(1);
+            if (e.key === 'ArrowLeft') excursionNav(-1);
+        });
+        // Свайпы для мобильных
+        (function() {
+            let touchStartX = 0;
+            const modal = document.getElementById('excursionModal');
+            modal.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, {passive: true});
+            modal.addEventListener('touchend', function(e) {
+                const diff = e.changedTouches[0].screenX - touchStartX;
+                if (Math.abs(diff) > 50) excursionNav(diff < 0 ? 1 : -1);
+            }, {passive: true});
+        })();
 
         // Кнопка "Наверх"
         const backToTopBtn = document.getElementById('backToTop');
