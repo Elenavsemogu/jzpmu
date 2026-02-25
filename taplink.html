@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JZPMU — Студия и школа перманентного макияжа</title>
+    <meta name="description" content="Перманентный макияж, обучение мастеров. Студия Юлии Заматаевой. Барнаул.">
+    <link rel="icon" href="./logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="JZPMU — Студия перманентного макияжа">
+    <meta property="og:description" content="Перманентный макияж и обучение мастеров. Барнаул.">
+    <meta property="og:image" content="https://elenavsemogu.github.io/jzpmu/photos/brows-new.jpg">
+    <meta property="og:url" content="https://elenavsemogu.github.io/jzpmu/taplink.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-main:    #F2F0EB;
+            --bg-card:    #FFFFFF;
+            --text-main:  #3E3B36;
+            --text-muted: #8C8681;
+            --border:     #DBCBBC;
+            --accent:     #B09B87;
+            --accent-gold:#C4A76B;
+            --radius-btn: 100px;
+            --radius-card:20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 300;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 16px 60px;
+        }
+
+        /* Subtle grain overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: .03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+            background-size: 200px;
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+
+        /* ── LOGO ── */
+        .logo-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .logo-svg {
+            width: 120px;
+            height: auto;
+        }
+
+        /* точно как .logo-name-mobile + divider на сайте */
+        .logo-names {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo-name-primary {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .logo-name-secondary {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .logo-city {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-align: center;
+        }
+
+        /* ── BUTTONS ── */
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 22px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .link-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(176, 155, 135, 0.18);
+        }
+
+        .link-btn:hover::after {
+            opacity: 0.04;
+        }
+
+        .link-btn:active {
+            transform: translateY(0);
+        }
+
+        .link-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--bg-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.25s;
+        }
+
+        .link-btn:hover .link-icon {
+            background: #EDE8E2;
+        }
+
+        .link-icon svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* branded social icon backgrounds */
+        .icon-ig   { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .icon-tg   { background: #29B6F6; }
+        .icon-vk   { background: #0077FF; }
+        .icon-max  { background: #5B4FEE; }
+        .icon-ig svg, .icon-tg svg, .icon-vk svg, .icon-max svg { color: #fff; }
+        .link-btn:hover .icon-ig,
+        .link-btn:hover .icon-tg,
+        .link-btn:hover .icon-vk,
+        .link-btn:hover .icon-max { filter: brightness(1.08); }
+
+        .link-label {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-label-main {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .link-label-sub {
+            display: block;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 1px;
+            font-weight: 300;
+        }
+
+        .link-arrow {
+            flex-shrink: 0;
+            color: var(--border);
+            position: relative;
+            z-index: 1;
+            transition: color 0.25s, transform 0.25s;
+        }
+
+        .link-btn:hover .link-arrow {
+            color: var(--accent);
+            transform: translateX(2px);
+        }
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 4px 4px 8px;
+            margin-top: 8px;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0.16em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: var(--border);
+            letter-spacing: 0.04em;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Logo + название как в хедере сайта -->
+    <div class="logo-wrap">
+        <svg class="logo-svg" viewBox="0 0 395.53 263.85" xmlns="http://www.w3.org/2000/svg" aria-label="JZPMU логотип">
+            <path fill="#3E3B36" d="M96.29,214.94V24.11H311.65L122.35,214.94H395.53V190.83H206.3L395.53,0,96.29.07,54.21,17.14v197.8C44.66,229.22,24.87,239.12.35,245.81c-.14,6-.21,12-.35,18C34.21,257.09,77,239.33,96.29,214.94Z"/>
+        </svg>
+        <div class="logo-names">
+            <span class="logo-name-primary">Джейзи Перманент</span>
+            <span class="logo-name-secondary">Студия и школа</span>
+        </div>
+        <span class="logo-city">Барнаул</span>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+
+        <!-- Studio -->
+        <div class="section-label">Студия</div>
+
+        <a href="https://elenavsemogu.github.io/jzpmu/" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Услуги студии</span>
+                <span class="link-label-sub">Перманент, тату, пирсинг, скайсы</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <!-- Education -->
+        <div class="section-label">Обучение</div>
+
+        <a href="https://elenavsemogu.github.io/jzpmu/academy.html" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Базовое обучение</span>
+                <span class="link-label-sub">С нуля до профи · трудоустройство</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <a href="https://elenavsemogu.github.io/jzpmu/academy.html#masterclass" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20h9"/>
+                    <path d="M16.376 3.622a1 1 0 013.002 3.002L7.368 18.635a2 2 0 01-.855.506l-2.872.86 .86-2.872a2 2 0 01.506-.855z"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Мастер-класс</span>
+                <span class="link-label-sub">Отдельные техники и форматы</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <a href="https://elenavsemogu.github.io/jzpmu/academy.html#programs" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Другие программы</span>
+                <span class="link-label-sub">Перекрытие, удаление, повышение квалификации</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <!-- Socials -->
+        <div class="section-label">Мы в соцсетях</div>
+
+        <a href="https://instagram.com/jzpmu" class="link-btn" target="_blank" rel="noopener">
+            <!-- TODO: уточнить точную ссылку на Instagram у Юлии -->
+            <div class="link-icon icon-ig">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4.5"/>
+                    <circle cx="17.5" cy="6.5" r="1.2" fill="#fff" stroke="none"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Instagram</span>
+                <span class="link-label-sub">Работы, новости, отзывы</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <a href="https://t.me/jzpmu" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon icon-tg">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M21.198 2.433a2.242 2.242 0 00-1.022.215l-16.5 6.866c-1.068.443-.997 1.955.106 2.283l3.717 1.14 1.448 4.617c.197.627.986.828 1.444.368l2.003-2.003 3.967 2.917c.734.54 1.775.163 1.988-.71l3.268-13.75a1.558 1.558 0 00-1.419-1.943zm-9.073 11.46l-.65 3.117-1.147-3.66 7.652-6.108-5.855 6.65z" fill="#fff"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Telegram</span>
+                <span class="link-label-sub">Советы, акции, обучение</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <a href="https://max.ru/u/f9LHodD0cOLAAaqT882mCdaaWPJ9N4AajNcrzfgKehyu_iHxxquaYCgdXhI" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon icon-max">
+                <!-- Max (бывший ВКонтакте Мессенджер / Mail.ru) — фирменная иконка -->
+                <svg viewBox="0 0 24 24" fill="#fff">
+                    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 7.5h-2.25c-.414 0-.75.336-.75.75v.75h3l-.375 2.25H13.5V18h-2.25v-4.75H9.75V11h1.5v-.75A3 3 0 0114.25 7.25H16.5v2.25z"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">Max</span>
+                <span class="link-label-sub">Канал в Max</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+        <a href="https://vk.com/jzpmu" class="link-btn" target="_blank" rel="noopener">
+            <div class="link-icon icon-vk">
+                <svg viewBox="0 0 24 24" fill="#fff">
+                    <path d="M12.785 16.241s.288-.032.436-.194c.136-.148.131-.427.131-.427s-.018-1.304.585-1.496c.595-.189 1.361 1.26 2.174 1.815.614.418 1.08.327 1.08.327l2.169-.03s1.134-.071.596-1.16c-.044-.085-.313-.757-1.612-2.14-1.36-1.448-1.178-1.213.46-3.714.998-1.51 1.396-2.432 1.27-2.826-.12-.376-1.013-.277-1.013-.277l-2.44.015s-.182-.025-.316.063c-.132.086-.216.286-.216.286s-.387 1.164-.902 2.154c-1.088 2.1-1.523 2.212-1.7 2.083-.413-.302-.31-1.22-.31-1.87 0-2.033.307-2.88-.598-3.1-.301-.072-.522-.12-1.29-.128-.986-.01-1.82.003-2.293.238-.314.154-.556.499-.409.519.182.025.595.113.814.414.284.39.274 1.267.274 1.267s.163 2.394-.38 2.692c-.373.2-.884-.207-1.98-2.066-.562-.974-.986-2.051-.986-2.051s-.08-.196-.211-.302a1.03 1.03 0 00-.419-.154l-2.319.015s-.348.01-.475.163c-.114.136-.009.417-.009.417s1.815 4.842 3.868 7.28c1.883 2.237 4.022 2.09 4.022 2.09h.97z"/>
+                </svg>
+            </div>
+            <div class="link-label">
+                <span class="link-label-main">ВКонтакте</span>
+                <span class="link-label-sub">Группа студии</span>
+            </div>
+            <div class="link-arrow">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+        </a>
+
+    </div><!-- /links -->
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-logo">JZPMU</div>
+        <div class="footer-copy">Барнаул · студия перманентного макияжа</div>
+    </div>
+
+</div>
+</body>
+</html>

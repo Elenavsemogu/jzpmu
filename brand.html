@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетинговые материалы — JZPMU</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="./logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #F2F0EB;
+            --bg-card: #FFFFFF;
+            --bg-dark: #3E3B36;
+            --text-main: #3E3B36;
+            --text-light: #FFFFFF;
+            --text-muted: #8C8681;
+            --border-line: #DBCBBC;
+            --accent: #B09B87;
+            --accent-gold: #C4A76B;
+            --radius-box: 24px;
+            --radius-btn: 100px;
+            --radius-sm: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg-main);
+            color: var(--text-main);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .brand-hero {
+            text-align: center;
+            padding: 80px 0 40px;
+        }
+        .brand-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        .brand-hero p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .brand-hero .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .brand-hero .back-link:hover { text-decoration: underline; }
+
+        .brand-section {
+            padding: 50px 0;
+        }
+        .brand-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        .brand-section .section-sub {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .brand-section h3 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            margin-top: 30px;
+        }
+
+        .brand-divider {
+            border: none;
+            border-top: 1px solid var(--border-line);
+            margin: 0;
+        }
+
+        /* Logo display */
+        .logo-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 640px) { .logo-showcase { grid-template-columns: 1fr; } }
+
+        .logo-box {
+            border-radius: var(--radius-box);
+            padding: 50px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+        .logo-box img, .logo-box svg { max-width: 200px; height: auto; }
+        .logo-box--light { background: var(--bg-card); border: 1px solid var(--border-line); }
+        .logo-box--dark { background: var(--bg-dark); }
+
+        .logo-rules {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0 30px;
+        }
+        @media (max-width: 640px) { .logo-rules { grid-template-columns: 1fr; } }
+        .logo-rule {
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+        }
+        .logo-rule strong { display: block; margin-bottom: 6px; font-weight: 500; }
+        .logo-rule p { color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+
+        .download-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border: 1px solid var(--border-line);
+            border-radius: var(--radius-btn);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            transition: 0.3s;
+            cursor: pointer;
+            background: transparent;
+        }
+        .download-btn:hover {
+            background: var(--text-main);
+            color: #fff;
+            border-color: var(--text-main);
+        }
+        .download-btn svg { width: 14px; height: 14px; }
+
+        /* Colors */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .color-card {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+        }
+        .color-swatch {
+            height: 80px;
+        }
+        .color-info {
+            padding: 14px 16px;
+        }
+        .color-info strong {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .color-info code {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: var(--bg-main);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .color-info code:hover { background: var(--border-line); }
+
+        /* Fonts */
+        .font-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-box);
+            padding: 40px;
+            margin-bottom: 20px;
+        }
+        .font-card .font-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .font-card .font-sample {
+            font-size: 36px;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .font-card .font-alphabet {
+            font-size: 24px;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .old-fonts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        @media (max-width: 640px) {
+            .old-fonts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .font-card .font-details {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Elements */
+        .elements-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+            align-items: center;
+        }
+        .demo-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-box);
+            padding: 24px;
+            max-width: 300px;
+        }
+        .demo-card h4 { font-size: 18px; margin-bottom: 6px; }
+        .demo-card p { color: var(--text-muted); font-size: 13px; }
+
+        .btn-pill {
+            padding: 10px 22px;
+            border: 1px solid var(--border-line);
+            border-radius: var(--radius-btn);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            display: inline-block;
+            background: transparent;
+        }
+        .btn-pill:hover { border-color: var(--text-main); background: var(--text-main); color: #fff; }
+        .btn-pill.primary { background: var(--text-main); color: #fff; border-color: var(--text-main); }
+        .btn-pill.primary:hover { background: var(--accent); border-color: var(--accent); }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        .copy-toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: var(--radius-btn);
+            font-size: 13px;
+            z-index: 9999;
+            opacity: 0;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+        .copy-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        @media (max-width: 900px) {
+            .font-card .font-sample { font-size: 22px; }
+            .font-card .font-alphabet { font-size: 18px; }
+            .font-card { padding: 28px; }
+        }
+
+        @media (max-width: 640px) {
+            .brand-hero h1 { font-size: 32px; }
+            .font-card .font-sample { font-size: 18px; line-height: 1.5; }
+            .font-card .font-alphabet { font-size: 13px; line-height: 1.6; }
+            .font-card { padding: 20px; }
+            .logo-showcase { grid-template-columns: 1fr; }
+            .logo-rules { grid-template-columns: 1fr; }
+            .color-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="brand-hero">
+        <a href="index.html" class="back-link">← Вернуться на сайт</a>
+        <h1>Маркетинговые материалы</h1>
+        <p>Руководство по использованию фирменного стиля JZPMU для партнёров и подрядчиков</p>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<!-- ЛОГОТИП -->
+<div class="container">
+    <div class="brand-section">
+        <h2>Логотип (актуальный)</h2>
+        <p class="section-sub">Основной логотип студии и школы перманентного макияжа — русифицированная версия</p>
+
+        <h3>Графический знак</h3>
+        <div class="logo-showcase">
+            <div class="logo-box logo-box--light">
+                <img src="./logo.svg" alt="JZPMU Logo — светлый фон">
+            </div>
+            <div class="logo-box logo-box--dark">
+                <img src="./logo.svg" alt="JZPMU Logo — тёмный фон" style="filter: brightness(0) invert(1);">
+            </div>
+        </div>
+
+        <h3>Связка: знак + надпись</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">На сайте логотип используется вместе с текстовой частью. Компоновка — как в шапке сайта:</p>
+
+        <div class="logo-showcase">
+            <div class="logo-box logo-box--light" style="flex-direction: column; gap: 20px; padding: 40px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <img src="./logo.svg" alt="JZPMU" style="height: 28px; width: auto;">
+                    <div style="width: 1px; height: 30px; background: var(--text-main); opacity: 0.15; flex-shrink: 0;"></div>
+                    <div style="display: flex; flex-direction: column; gap: 2px;">
+                        <span style="font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-main);">Джейзи Перманент</span>
+                        <span style="font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 2.5px; text-transform: uppercase; color: var(--text-main);">Студия и школа</span>
+                    </div>
+                </div>
+                <span style="font-size: 12px; color: var(--text-muted);">Светлый фон — тёмный знак и текст</span>
+            </div>
+            <div class="logo-box logo-box--dark" style="flex-direction: column; gap: 20px; padding: 40px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <img src="./logo.svg" alt="JZPMU" style="height: 28px; width: auto; filter: brightness(0) invert(1);">
+                    <div style="width: 1px; height: 30px; background: #fff; opacity: 0.2; flex-shrink: 0;"></div>
+                    <div style="display: flex; flex-direction: column; gap: 2px;">
+                        <span style="font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase; color: #fff;">Джейзи Перманент</span>
+                        <span style="font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 300; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.7);">Студия и школа</span>
+                    </div>
+                </div>
+                <span style="font-size: 12px; color: rgba(255,255,255,0.5);">Тёмный фон — светлый знак и текст</span>
+            </div>
+        </div>
+
+        <h3>Параметры надписи</h3>
+        <div style="background: var(--bg-card); border-radius: var(--radius-sm); padding: 20px; margin-bottom: 20px;">
+            <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+                <tr style="border-bottom: 1px solid var(--border-line);">
+                    <td style="padding: 8px 0; color: var(--text-muted);">Шрифт</td>
+                    <td style="padding: 8px 0; font-weight: 500;">Manrope</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-line);">
+                    <td style="padding: 8px 0; color: var(--text-muted);">«Джейзи Перманент»</td>
+                    <td style="padding: 8px 0;">11px, Medium (500), uppercase, letter-spacing 2.5px</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-line);">
+                    <td style="padding: 8px 0; color: var(--text-muted);">«Студия и школа»</td>
+                    <td style="padding: 8px 0;">11px, Light (300), uppercase, letter-spacing 2.5px</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-line);">
+                    <td style="padding: 8px 0; color: var(--text-muted);">Разделитель</td>
+                    <td style="padding: 8px 0;">1px × 30px, opacity 15%</td>
+                </tr>
+                <tr>
+                    <td style="padding: 8px 0; color: var(--text-muted);">Высота знака</td>
+                    <td style="padding: 8px 0;">28px</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Правила использования</h3>
+        <div class="logo-rules">
+            <div class="logo-rule">
+                <strong>✓ Допускается</strong>
+                <p>Размещение на однотонном фоне (светлом или тёмном). Минимальная ширина знака — 80px. Сохраняйте пропорции. На тёмном фоне — инвертируйте знак и текст в белый. Надпись набирается только шрифтом Manrope с указанными параметрами.</p>
+            </div>
+            <div class="logo-rule">
+                <strong>✗ Не допускается</strong>
+                <p>Растягивание, искажение пропорций. Размещение на пёстром фоне без подложки. Изменение цвета на нестандартный. Обрезка элементов. Замена шрифта надписи. Объединение надписи в одну строку.</p>
+            </div>
+        </div>
+
+        <h3>Скачать актуальный логотип</h3>
+        <div class="download-row">
+            <a href="./logo.svg" download="jzpmu-logo.svg" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG (знак)
+            </a>
+            <a href="./logo.png" download="jzpmu-logo.png" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                PNG (знак)
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<!-- СТАРЫЙ ЛОГОТИП -->
+<div class="container">
+    <div class="brand-section">
+        <h2>Логотип (до русификации)</h2>
+        <div style="background: #FFF3E0; border: 1px solid #FFB74D; border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 30px;">
+            <strong style="color: #E65100;">⚠ Внимание!</strong>
+            <p style="color: #BF360C; font-size: 13px; margin-top: 4px;">
+                Это старая версия логотипа с англоязычным написанием «Julia Zamataeva / Zamataeva PMU School and Studio». 
+                Перед использованием <strong>обязательно уточните у руководства</strong>, какой именно вариант логотипа подходит для вашей задачи. 
+                По умолчанию используйте актуальный русифицированный логотип выше.
+            </p>
+        </div>
+
+        <div class="logo-showcase">
+            <div class="logo-box logo-box--light">
+                <img src="./brand/old-logo-full.svg" alt="Старый логотип — светлый фон" style="max-width: 280px;">
+            </div>
+            <div class="logo-box logo-box--dark">
+                <img src="./brand/old-logo-full.svg" alt="Старый логотип — тёмный фон" style="max-width: 280px; filter: brightness(0) invert(1);">
+            </div>
+        </div>
+
+        <h3>Шрифты старого логотипа</h3>
+        <div class="old-fonts-grid">
+            <div style="background: var(--bg-card); border-radius: var(--radius-sm); padding: 20px;">
+                <div style="font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Имя (ZAMATAEVA)</div>
+                <div style="font-size: 24px; letter-spacing: 3px;">Novoposelensky</div>
+                <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Декоративный шрифт для написания имени бренда</p>
+            </div>
+            <div style="background: var(--bg-card); border-radius: var(--radius-sm); padding: 20px;">
+                <div style="font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Подпись (PMU School and Studio)</div>
+                <div style="font-size: 24px; font-weight: 300; letter-spacing: 3px;">Montserrat Light</div>
+                <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">Тонкий геометричный шрифт для подписи</p>
+            </div>
+        </div>
+
+        <h3>Скачать старый логотип и шрифты</h3>
+        <div class="download-row">
+            <a href="./brand/old-logo-full.svg" download="zamataeva-logo-full.svg" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG (полный)
+            </a>
+            <a href="./brand/old-logo-full.png" download="zamataeva-logo-full.png" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                PNG (полный)
+            </a>
+            <a href="./brand/old-logo-mark.svg" download="zamataeva-mark.svg" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG (знак)
+            </a>
+            <a href="./brand/Novoposelensky.otf" download="Novoposelensky.otf" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Novoposelensky OTF
+            </a>
+            <a href="./brand/Montserrat-Light.ttf" download="Montserrat-Light.ttf" class="download-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Montserrat Light TTF
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<!-- ЦВЕТА -->
+<div class="container">
+    <div class="brand-section">
+        <h2>Фирменные цвета</h2>
+        <p class="section-sub">Нажмите на код цвета, чтобы скопировать</p>
+
+        <h3>Основные</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #3E3B36;"></div>
+                <div class="color-info">
+                    <strong>Основной тёмный</strong>
+                    <code onclick="copyColor('#3E3B36')">#3E3B36</code>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #B09B87;"></div>
+                <div class="color-info">
+                    <strong>Акцент</strong>
+                    <code onclick="copyColor('#B09B87')">#B09B87</code>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #C4A76B;"></div>
+                <div class="color-info">
+                    <strong>Акцент золотой</strong>
+                    <code onclick="copyColor('#C4A76B')">#C4A76B</code>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #F2F0EB;"></div>
+                <div class="color-info">
+                    <strong>Фон основной</strong>
+                    <code onclick="copyColor('#F2F0EB')">#F2F0EB</code>
+                </div>
+            </div>
+        </div>
+
+        <h3>Дополнительные</h3>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #FFFFFF; border-bottom: 1px solid #eee;"></div>
+                <div class="color-info">
+                    <strong>Фон карточек</strong>
+                    <code onclick="copyColor('#FFFFFF')">#FFFFFF</code>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #8C8681;"></div>
+                <div class="color-info">
+                    <strong>Текст приглушённый</strong>
+                    <code onclick="copyColor('#8C8681')">#8C8681</code>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #DBCBBC;"></div>
+                <div class="color-info">
+                    <strong>Линии и рамки</strong>
+                    <code onclick="copyColor('#DBCBBC')">#DBCBBC</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<!-- ШРИФТЫ -->
+<div class="container">
+    <div class="brand-section">
+        <h2>Шрифты</h2>
+        <p class="section-sub">Два шрифта формируют типографику бренда</p>
+
+        <div class="font-card">
+            <div class="font-name">Заголовки</div>
+            <div class="font-sample" style="font-family: 'Cormorant Garamond', serif; font-weight: 400;">
+                Cormorant Garamond
+            </div>
+            <div class="font-sample font-alphabet" style="font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--text-muted);">
+                Абвгдежзиклмнопрстуфхцчшщэюя 0123456789
+            </div>
+            <p class="font-details">Используется в заголовках h1, h2, ценах, акцентных блоках. Начертания: Light (300), Regular (400), Medium (500), SemiBold (600).</p>
+            <div class="download-row" style="margin-top: 15px;">
+                <a href="https://fonts.google.com/specimen/Cormorant+Garamond" target="_blank" class="download-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Google Fonts
+                </a>
+            </div>
+        </div>
+
+        <div class="font-card">
+            <div class="font-name">Основной текст</div>
+            <div class="font-sample" style="font-family: 'Manrope', sans-serif; font-weight: 400;">
+                Manrope
+            </div>
+            <div class="font-sample font-alphabet" style="font-family: 'Manrope', sans-serif; font-weight: 400; color: var(--text-muted);">
+                Абвгдежзиклмнопрстуфхцчшщэюя 0123456789
+            </div>
+            <p class="font-details">Основной шрифт сайта — текст, кнопки, навигация, подписи. Начертания: Light (300), Regular (400), Medium (500), SemiBold (600).</p>
+            <div class="download-row" style="margin-top: 15px;">
+                <a href="https://fonts.google.com/specimen/Manrope" target="_blank" class="download-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Google Fonts
+                </a>
+            </div>
+        </div>
+
+        <h3>Шрифт логотипа</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Логотип выполнен как графический знак (SVG-иконка), не использует текстовый шрифт. Подпись под логотипом — Manrope Medium.</p>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<!-- ЭЛЕМЕНТЫ UI -->
+<div class="container">
+    <div class="brand-section">
+        <h2>Базовые элементы</h2>
+        <p class="section-sub">Кнопки и карточки, используемые на сайте</p>
+
+        <h3>Кнопки</h3>
+        <div class="elements-grid">
+            <a href="#" class="btn-pill primary" onclick="return false;">Основная кнопка</a>
+            <a href="#" class="btn-pill" onclick="return false;">Вторичная кнопка</a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">
+            Скругление: 100px (pill). Шрифт: Manrope Medium, 11px, uppercase, tracking 2px.<br>
+            Основная: фон <code style="background: var(--bg-card); padding: 2px 6px; border-radius: 4px;">#3E3B36</code>, текст белый.<br>
+            Вторичная: обводка <code style="background: var(--bg-card); padding: 2px 6px; border-radius: 4px;">#DBCBBC</code>, текст тёмный.
+        </p>
+
+        <h3>Карточка</h3>
+        <div class="elements-grid">
+            <div class="demo-card">
+                <h4>Заголовок карточки</h4>
+                <p>Описание внутри карточки с приглушённым текстом и скруглёнными углами 24px.</p>
+            </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 13px; margin-top: 10px;">
+            Фон: <code style="background: var(--bg-card); padding: 2px 6px; border-radius: 4px;">#FFFFFF</code>. Скругление: 24px. Padding: 24px.
+        </p>
+
+        <h3>Скругления</h3>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 24px;"></div>
+                <span style="font-size: 12px; color: var(--text-muted); margin-top: 6px; display: block;">24px — карточки</span>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 12px;"></div>
+                <span style="font-size: 12px; color: var(--text-muted); margin-top: 6px; display: block;">12px — элементы</span>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: var(--accent); border-radius: 100px;"></div>
+                <span style="font-size: 12px; color: var(--text-muted); margin-top: 6px; display: block;">100px — кнопки</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="brand-divider">
+
+<footer>
+    <div class="container">
+        <p>© JZPMU — Джейзи Перманент / Студия и школа</p>
+        <p style="margin-top: 6px;"><a href="index.html">Вернуться на сайт</a></p>
+    </div>
+</footer>
+
+<div class="copy-toast" id="copyToast">Скопировано!</div>
+
+<script>
+function copyColor(hex) {
+    navigator.clipboard.writeText(hex).then(function() {
+        var toast = document.getElementById('copyToast');
+        toast.textContent = 'Скопировано: ' + hex;
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1500);
+    });
+}
+</script>
+
+</body>
+</html>
