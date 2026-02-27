@@ -1704,15 +1704,21 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 16px;
 }
 
 .modal-header h3 {
     font-size: 28px;
+    flex: 1;
+    min-width: 0;
 }
 
 .modal-close {
     width: 36px;
     height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    flex-shrink: 0;
     border: 1px solid var(--border-line);
     border-radius: 50%;
     background: transparent;
@@ -1723,6 +1729,10 @@ footer {
     justify-content: center;
     transition: all 0.3s ease;
     color: var(--text-main);
+    padding: 0;
+    line-height: 1;
+    aspect-ratio: 1;
+    box-sizing: border-box;
 }
 
 .modal-close:hover {
