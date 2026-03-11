@@ -962,6 +962,20 @@ section {
     font-size: 42px;
 }
 
+.teacher-avatar-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.teacher-card.featured .teacher-avatar-img {
+    width: 120px;
+    height: 120px;
+}
+
 .teacher-role {
     display: inline-block;
     padding: 6px 14px;
