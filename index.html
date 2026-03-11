@@ -530,6 +530,10 @@
                             <label for="formComment">Комментарий</label>
                             <textarea id="formComment" name="comment" placeholder="Комментарий (необязательно)"></textarea>
                         </div>
+                        <label class="consent-label">
+                            <input type="checkbox" id="formConsent" required>
+                            <span>Даю согласие на <a href="privacy.html" target="_blank">обработку персональных данных</a> в соответствии с ФЗ-152</span>
+                        </label>
                         <button type="submit" class="form-submit" id="formSubmitBtn">Отправить заявку</button>
                     </form>
 
@@ -674,7 +678,7 @@
 
             <div class="footer-bottom">
                 <div>
-                    © 2026 JZPMU. ИП Заматаева Ю.В. · ИНН 668500699202 · ОГРНИП 324665800015670
+                    © 2026 JZPMU. ИП Заматаева Ю.В. · ИНН 668500699202 · ОГРНИП 324665800015670 · <a href="privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Политика конфиденциальности</a>
                 </div>
                 <div class="footer-socials">
                     <a href="https://t.me/jzpmu" target="_blank">Tg</a>
@@ -1370,6 +1374,10 @@
 
             document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
             let hasError = false;
+            if (!document.getElementById('formConsent').checked) {
+                document.getElementById('formConsent').focus();
+                hasError = true;
+            }
             if (!name) {
                 document.getElementById('formNameError').textContent = 'Введите ваше имя';
                 hasError = true;
