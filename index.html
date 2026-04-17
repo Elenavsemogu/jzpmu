@@ -1193,6 +1193,7 @@
             return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
         }
         function openDolyamiModal(serviceName, price) {
+            ym(108553725, 'reachGoal', 'click_dolyami');
             var payment = price / 4;
             var fp = formatDolyamiPrice(payment);
             document.getElementById('dolyami-service-name').textContent = serviceName || '';
@@ -1529,6 +1530,7 @@
                 });
 
                 if (response.ok) {
+                    ym(108553725, 'reachGoal', 'form_main');
                     btn.textContent = '✓ Заявка отправлена!';
                     btn.style.background = 'var(--accent)';
                     document.getElementById('contactForm').reset();
@@ -1552,6 +1554,18 @@
 
             return false;
         }
+
+        // Яндекс.Метрика: цели на клики
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a');
+            if (!link) return;
+            var href = link.getAttribute('href') || '';
+            if (href.indexOf('dkd.su') !== -1) ym(108553725, 'reachGoal', 'click_book');
+            else if (href.indexOf('t.me/') !== -1) ym(108553725, 'reachGoal', 'click_telegram');
+            else if (href.indexOf('wa.me/') !== -1) ym(108553725, 'reachGoal', 'click_whatsapp');
+            else if (href.indexOf('max.ru/') !== -1) ym(108553725, 'reachGoal', 'click_max');
+            else if (href.indexOf('tel:') === 0) ym(108553725, 'reachGoal', 'click_phone');
+        });
     </script>
 
 </body>
