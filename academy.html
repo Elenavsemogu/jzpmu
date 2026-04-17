@@ -539,7 +539,30 @@
                 <div style="background: var(--bg-card); border-radius: var(--radius-box); padding: 40px; text-align: center;">
                     <h3 style="font-size: 28px; margin-bottom: 10px;">Базовый курс «С нуля до профи»</h3>
                     <div style="font-size: 42px; font-family: 'Cormorant Garamond', serif; font-weight: 500; color: var(--accent-gold); margin-bottom: 10px;">155 000 ₽</div>
-                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 25px;">или от 12 920 ₽/мес в рассрочку до 12 месяцев</p>
+                    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">или от 12 920 ₽/мес в рассрочку до 12 месяцев</p>
+                    <div style="max-width: 420px; margin: 0 auto 20px;">
+                        <div class="dolyami-plus-card" onclick="openDolyamiPlusModal()">
+                            <div class="dolyami-plus-header">
+                                <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                                <span class="dolyami-plus-label">Плюс</span>
+                            </div>
+                            <div class="dolyami-plus-options">
+                                <div class="dolyami-plus-option">
+                                    <span class="dolyami-plus-months">3 мес</span>
+                                    <span class="dolyami-plus-amount">от 51 700 ₽/мес</span>
+                                </div>
+                                <div class="dolyami-plus-option">
+                                    <span class="dolyami-plus-months">6 мес</span>
+                                    <span class="dolyami-plus-amount">от 25 900 ₽/мес</span>
+                                </div>
+                                <div class="dolyami-plus-option">
+                                    <span class="dolyami-plus-months">10 мес</span>
+                                    <span class="dolyami-plus-amount">от 15 500 ₽/мес</span>
+                                </div>
+                            </div>
+                            <span class="dolyami-plus-cta">Подробнее →</span>
+                        </div>
+                    </div>
                     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                         <a href="#application" class="btn-pill primary">Записаться на курс</a>
                         <a href="#" class="btn-pill">Оплатить в рассрочку</a>
@@ -841,6 +864,105 @@
             </div>
         </div>
     </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДОЛЯМИ ПЛЮС (стиль официального виджета) -->
+    <div class="dolyami-modal-overlay" id="dolyami-plus-modal">
+        <div class="modal" style="max-width: 480px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 28px 28px 0;">
+                <span class="dolyami-badge" style="margin:0; padding: 8px 14px;">
+                    <img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white" style="height:16px;">
+                    <img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black" style="height:16px;">
+                </span>
+                <button class="modal-close" onclick="closeDolyamiPlusModal()">×</button>
+            </div>
+            <div style="padding: 20px 28px 28px;">
+                <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.2;">Разделите стоимость покупки</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">Заплатите сейчас только часть, а оставшееся будем списывать каждый месяц</p>
+
+                <!-- Табы периодов (как на скрине Долями Плюс) -->
+                <div style="display: flex; gap: 0; border: 1px solid #E0E0E0; border-radius: 8px; overflow: hidden; margin-bottom: 20px;" id="dolyami-plus-tabs">
+                    <button onclick="switchDolyamiTab('6w')" class="dolyami-tab active" data-tab="6w" style="flex:1; padding: 10px 4px; border: none; background: #1A1A1A; color: #fff; font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">6 недель</button>
+                    <button onclick="switchDolyamiTab('3m')" class="dolyami-tab" data-tab="3m" style="flex:1; padding: 10px 4px; border: none; border-left: 1px solid #E0E0E0; background: #fff; color: #1A1A1A; font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">3 мес</button>
+                    <button onclick="switchDolyamiTab('6m')" class="dolyami-tab" data-tab="6m" style="flex:1; padding: 10px 4px; border: none; border-left: 1px solid #E0E0E0; background: #fff; color: #1A1A1A; font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">6 мес</button>
+                    <button onclick="switchDolyamiTab('10m')" class="dolyami-tab" data-tab="10m" style="flex:1; padding: 10px 4px; border: none; border-left: 1px solid #E0E0E0; background: #fff; color: #1A1A1A; font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">10 мес</button>
+                </div>
+
+                <div style="background: #F5F5F5; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                    <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">Базовый курс «С нуля до профи» · 155 000 ₽</div>
+                    <div id="dolyami-plus-now" style="font-size: 22px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">38 750 ₽ сейчас</div>
+                    <div id="dolyami-plus-then" style="font-size: 14px; color: var(--text-muted); margin-bottom: 4px;">Затем по 38 750 ₽ раз в 2 недели</div>
+                    <div id="dolyami-plus-extra" style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;"></div>
+                    <div style="display: flex; gap: 4px;" id="dolyami-plus-bar">
+                        <div style="flex:1; height: 4px; background: #3B82F6; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-bottom: 20px;">
+                    <a href="https://dolyame.ru" target="_blank" style="color: #3B82F6; font-size: 13px; text-decoration: none;">Подробнее о сервисе можно узнать на dolyame.ru</a>
+                </p>
+
+                <div class="dolyami-modal-note">
+                    <p>Пока у нас нет онлайн-оформления Долями, но <strong>напишите нам в Max</strong> — мы поможем оформить оплату Долями Плюс в два клика!</p>
+                </div>
+
+                <a href="https://max.ru/id668500699202_biz" target="_blank" class="btn-pill primary" style="display: block; text-align: center; margin-top: 16px; width: 100%;">Написать в Max</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openDolyamiPlusModal() {
+            switchDolyamiTab('6w');
+            document.getElementById('dolyami-plus-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDolyamiPlusModal() {
+            document.getElementById('dolyami-plus-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function fmtP(n) { return Math.ceil(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0'); }
+        function switchDolyamiTab(tab) {
+            var tabs = document.querySelectorAll('#dolyami-plus-tabs .dolyami-tab');
+            tabs.forEach(function(t) {
+                if (t.dataset.tab === tab) { t.style.background = '#1A1A1A'; t.style.color = '#fff'; }
+                else { t.style.background = '#fff'; t.style.color = '#1A1A1A'; }
+            });
+            var price = 155000;
+            var nowEl = document.getElementById('dolyami-plus-now');
+            var thenEl = document.getElementById('dolyami-plus-then');
+            var extraEl = document.getElementById('dolyami-plus-extra');
+            var barEl = document.getElementById('dolyami-plus-bar');
+            if (tab === '6w') {
+                var p = price / 4;
+                nowEl.textContent = fmtP(p) + ' ₽ сейчас';
+                thenEl.textContent = 'Затем по ' + fmtP(p) + ' ₽ раз в 2 недели';
+                extraEl.textContent = '';
+                barEl.innerHTML = '<div style="flex:1;height:4px;background:#3B82F6;border-radius:2px;"></div><div style="flex:1;height:4px;background:#E0E0E0;border-radius:2px;"></div><div style="flex:1;height:4px;background:#E0E0E0;border-radius:2px;"></div><div style="flex:1;height:4px;background:#E0E0E0;border-radius:2px;"></div>';
+            } else {
+                var months = tab === '3m' ? 3 : tab === '6m' ? 6 : 10;
+                var monthly = Math.ceil(price / months);
+                nowEl.textContent = '0 ₽ сейчас';
+                thenEl.textContent = 'Затем по ' + fmtP(monthly) + ' ₽ в месяц';
+                extraEl.textContent = 'Долями Плюс · ' + months + ' месяцев';
+                var bars = '';
+                for (var i = 0; i < months; i++) {
+                    bars += '<div style="flex:1;height:4px;background:' + (i === 0 ? '#3B82F6' : '#E0E0E0') + ';border-radius:2px;"></div>';
+                }
+                barEl.innerHTML = bars;
+            }
+        }
+        document.getElementById('dolyami-plus-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeDolyamiPlusModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('dolyami-plus-modal').classList.contains('active')) {
+                closeDolyamiPlusModal();
+            }
+        });
+    </script>
 
     <script>
         // Sticky-бар: появляется после прокрутки 200px (только <=1024px)

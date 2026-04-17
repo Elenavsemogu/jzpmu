@@ -297,6 +297,23 @@
         </div>
     </section>
 
+    <!-- ДОЛЯМИ ПРОМО -->
+    <div class="container" style="padding-bottom: 0; padding-top: 20px;">
+        <div class="dolyami-promo" onclick="openDolyamiModal('Перманент бровей / губ (Топ-мастер)', 12500)">
+            <div class="dolyami-promo-left">
+                <span class="dolyami-badge" style="margin:0;padding:8px 14px;">
+                    <img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white" style="height:16px;">
+                    <img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black" style="height:16px;">
+                </span>
+                <div class="dolyami-promo-text">
+                    <span class="dolyami-promo-title">Оплата Долями — без переплат</span>
+                    <span class="dolyami-promo-sub">Разделите стоимость процедуры на 4 равных платежа</span>
+                </div>
+            </div>
+            <span class="dolyami-promo-arrow">→</span>
+        </div>
+    </div>
+
     <!-- УСЛУГИ -->
     <section id="services">
         <div class="container">
@@ -784,6 +801,12 @@
 
                 <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
 
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Перманент бровей (Топ-мастер)', 12500)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 3 125 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
+
                 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
                     <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
                     <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на примерку</a>
@@ -860,6 +883,12 @@
 
                 <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
 
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Перманент губ (Топ-мастер)', 12500)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 3 125 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
+
                 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
                     <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
                     <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на примерку</a>
@@ -915,6 +944,12 @@
                 </table>
 
                 <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
+
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Межресничка (Топ-мастер)', 8000)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 2 000 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
 
                 <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
                     <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
@@ -1102,6 +1137,83 @@
             </div>
         </div>
     </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДОЛЯМИ (стиль официального виджета) -->
+    <div class="dolyami-modal-overlay" id="dolyami-modal">
+        <div class="modal" style="max-width: 480px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 28px 28px 0;">
+                <span class="dolyami-badge" style="margin:0; padding: 8px 14px;">
+                    <img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white" style="height:16px;">
+                    <img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black" style="height:16px;">
+                </span>
+                <button class="modal-close" onclick="closeDolyamiModal()">×</button>
+            </div>
+            <div style="padding: 20px 28px 28px;">
+                <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.2;">Разделите стоимость покупки</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">Заплатите сейчас только часть, а оставшееся будем списывать каждые две недели</p>
+
+                <div style="display: flex; gap: 24px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                        <span style="font-size: 13px; color: var(--text-main);">Как обычная оплата картой</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+                        <span style="font-size: 13px; color: var(--text-main);">Без кредитного договора</span>
+                    </div>
+                </div>
+
+                <div style="background: #F5F5F5; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                    <div id="dolyami-service-name" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;"></div>
+                    <div style="font-size: 22px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;" id="dolyami-now"></div>
+                    <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 14px;" id="dolyami-then"></div>
+                    <div style="display: flex; gap: 4px;">
+                        <div style="flex:1; height: 4px; background: #3B82F6; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-bottom: 20px;">
+                    <a href="https://dolyame.ru" target="_blank" style="color: #3B82F6; font-size: 13px; text-decoration: none;">Подробнее о сервисе можно узнать на dolyame.ru</a>
+                </p>
+
+                <div class="dolyami-modal-note">
+                    <p>Пока у нас нет онлайн-оформления Долями, но <strong>напишите нам в Max</strong> — мы поможем оформить оплату Долями в два клика!</p>
+                </div>
+
+                <a href="https://max.ru/id668500699202_biz" target="_blank" class="btn-pill primary" style="display: block; text-align: center; margin-top: 16px; width: 100%;">Написать в Max</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatDolyamiPrice(n) {
+            return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+        }
+        function openDolyamiModal(serviceName, price) {
+            var payment = price / 4;
+            var fp = formatDolyamiPrice(payment);
+            document.getElementById('dolyami-service-name').textContent = serviceName || '';
+            document.getElementById('dolyami-now').textContent = fp + ' ₽ сейчас';
+            document.getElementById('dolyami-then').textContent = 'Затем по ' + fp + ' ₽ раз в 2 недели';
+            document.getElementById('dolyami-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDolyamiModal() {
+            document.getElementById('dolyami-modal').classList.remove('active');
+            if (!document.querySelector('.modal-overlay.active')) document.body.style.overflow = '';
+        }
+        document.getElementById('dolyami-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeDolyamiModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('dolyami-modal').classList.contains('active')) {
+                closeDolyamiModal();
+            }
+        });
+    </script>
 
     <script>
         // Sticky-бар: появляется после прокрутки 200px (только <=1024px)
