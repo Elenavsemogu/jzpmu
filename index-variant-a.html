@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108553725', 'ym');
+        ym(108553725, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108553725" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JZPMU | Студия и школа перманентного макияжа в Барнауле</title>
+    <meta name="description" content="Перманентный макияж бровей, губ, межресничка в Барнауле. Более 6 авторских техник, премиум-пигменты. Обучение мастеров ПМ с нуля. Студия Юлии Заматаевой.">
+    <meta name="keywords" content="перманентный макияж Барнаул, ПМ брови, ПМ губы, межресничка, обучение перманентному макияжу, тату, пирсинг, скайсы">
+    <link rel="canonical" href="https://jzpmu.ru/">
+    <link rel="icon" href="./logo.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JZPMU — Студия перманентного макияжа в Барнауле">
+    <meta property="og:description" content="Более 6 авторских техник ПМ бровей и губ. Обучение мастеров с нуля. Премиум-пигменты, только одноразовые материалы.">
+    <meta property="og:image" content="https://jzpmu.ru/photos/brows-new.jpg">
+    <meta property="og:url" content="https://jzpmu.ru/">
+    <meta property="og:locale" content="ru_RU">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JZPMU — Студия перманентного макияжа в Барнауле">
+    <meta name="twitter:description" content="Более 6 авторских техник ПМ бровей и губ. Обучение мастеров с нуля.">
+    <meta name="twitter:image" content="https://jzpmu.ru/photos/brows-new.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- PREVIEW OVERRIDES: премиальный первый экран. Только для index-preview.html -->
+    <style>
+    @media (min-width: 993px) {
+        /* Плотнее первый экран: убираем 100vh и лишний воздух до услуг */
+        .hero {
+            min-height: auto;
+            padding-top: 118px;
+            padding-bottom: 34px;
+        }
+        .hero-layout { gap: 56px; align-items: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { margin-bottom: 28px; }
+        .hero-facts { margin-top: 32px; padding-top: 24px; gap: 40px; }
+    }
+
+    /* === Премиальная основная CTA: благородное золото + блик на ховере === */
+    .hero-buttons .btn-pill.primary {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, #d8c294 0%, var(--accent-gold) 52%, #b3924f 100%);
+        color: #fff;
+        border: none;
+        letter-spacing: 0.03em;
+        box-shadow: 0 8px 22px rgba(196, 167, 107, 0.34), inset 0 1px 0 rgba(255,255,255,0.28);
+        transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .hero-buttons .btn-pill.primary::after {
+        content: '';
+        position: absolute; top: 0; left: -130%;
+        width: 55%; height: 100%;
+        background: linear-gradient(100deg, transparent, rgba(255,255,255,0.5), transparent);
+        transform: skewX(-20deg);
+        transition: left .6s ease;
+        pointer-events: none;
+    }
+    .hero-buttons .btn-pill.primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 32px rgba(196, 167, 107, 0.46), inset 0 1px 0 rgba(255,255,255,0.32);
+    }
+    .hero-buttons .btn-pill.primary:hover::after { left: 140%; }
+    .hero-buttons .btn-pill:not(.primary) {
+        background: transparent;
+        border: 1px solid var(--border-line);
+        color: var(--text-main);
+    }
+    .hero-buttons .btn-pill:not(.primary):hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    /* === ПОПУЛЯРНЫЕ УСЛУГИ — editorial-плитки с фото === */
+    .quick-services { padding: 6px 0 10px; }
+    .quick-services__head {
+        display: flex; align-items: center; gap: 18px; margin-bottom: 18px;
+    }
+    .quick-services__label {
+        font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em;
+        color: var(--text-muted); white-space: nowrap;
+    }
+    .quick-services__line { flex: 1; height: 1px; background: var(--border-line); }
+    .quick-services__inner {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    .q-tile {
+        position: relative; display: block; height: 170px;
+        border-radius: 20px; overflow: hidden; text-decoration: none;
+        box-shadow: 0 12px 30px rgba(62,59,54,0.10);
+    }
+    .q-tile__img {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; transform: scale(1.02);
+        transition: transform .6s ease;
+    }
+    .q-tile::before {
+        content: ''; position: absolute; inset: 0; z-index: 1;
+        background: linear-gradient(180deg, rgba(62,59,54,0.04) 0%, rgba(62,59,54,0.16) 42%, rgba(62,59,54,0.76) 100%);
+        transition: background .4s ease;
+    }
+    .q-tile:hover .q-tile__img { transform: scale(1.08); }
+    .q-tile:hover::before {
+        background: linear-gradient(180deg, rgba(62,59,54,0.04) 0%, rgba(62,59,54,0.2) 42%, rgba(62,59,54,0.83) 100%);
+    }
+    .q-tile__body {
+        position: absolute; inset: 0; z-index: 2;
+        display: flex; flex-direction: column; justify-content: flex-end;
+        padding: 18px 20px; color: #fff;
+    }
+    .q-tile__name {
+        font-family: 'Cormorant Garamond', serif; font-size: 25px; line-height: 1.05;
+        font-weight: 500; text-shadow: 0 1px 10px rgba(0,0,0,0.25);
+    }
+    .q-tile__meta {
+        display: flex; align-items: center; justify-content: space-between; margin-top: 10px;
+    }
+    .q-tile__price { font-size: 13px; letter-spacing: 0.02em; color: rgba(255,255,255,0.88); }
+    .q-tile__arrow {
+        width: 38px; height: 38px; border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.14);
+        -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 15px; color: #fff;
+        transition: background .3s ease, border-color .3s ease, transform .3s ease;
+    }
+    .q-tile:hover .q-tile__arrow {
+        background: var(--accent-gold); border-color: var(--accent-gold); transform: translateX(3px);
+    }
+    @media (max-width: 992px) {
+        .quick-services__inner { grid-template-columns: 1fr; gap: 12px; }
+        .q-tile { height: 128px; }
+    }
+
+    /* === Долями-чип в hero === */
+    .hero-dolyami {
+        display: inline-flex; align-items: center; gap: 12px;
+        margin-top: 18px; padding: 10px 16px;
+        background: var(--bg-card); border: 1px solid var(--border-line);
+        border-radius: 100px; cursor: pointer;
+        transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+    }
+    .hero-dolyami:hover { border-color: var(--accent-gold); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(196,167,107,.18); }
+    .hero-dolyami__logo { height: 15px; display: block; }
+    .hero-dolyami__txt { font-size: 13px; color: var(--text-main); line-height: 1.3; }
+    .hero-dolyami__txt b { font-weight: 600; }
+    .hero-dolyami__txt i { font-style: normal; color: var(--text-muted); }
+
+    /* === Развилка: услуга / обучение === */
+    .path-split { padding: 30px 0 10px; }
+    .path-split__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .path-door {
+        position: relative; overflow: hidden; border-radius: 22px; min-height: 190px;
+        display: flex; flex-direction: column; justify-content: flex-end;
+        padding: 28px 30px; text-decoration: none; color: #fff;
+        box-shadow: 0 14px 34px rgba(62,59,54,.12);
+    }
+    .path-door__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .path-door::before {
+        content: ''; position: absolute; inset: 0; z-index: 1;
+        background: linear-gradient(180deg, rgba(62,59,54,.18) 0%, rgba(62,59,54,.42) 50%, rgba(62,59,54,.82) 100%);
+        transition: background .4s ease;
+    }
+    .path-door:hover .path-door__img { transform: scale(1.06); }
+    .path-door:hover::before { background: linear-gradient(180deg, rgba(62,59,54,.2) 0%, rgba(62,59,54,.46) 50%, rgba(62,59,54,.86) 100%); }
+    .path-door__body { position: relative; z-index: 2; }
+    .path-door__eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .14em; color: var(--accent-gold); margin-bottom: 8px; }
+    .path-door__title { font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1.05; margin-bottom: 6px; }
+    .path-door__sub { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.5; }
+    .path-door__cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; color: #fff; }
+    .path-door__cta::after { content: '→'; transition: transform .3s ease; }
+    .path-door:hover .path-door__cta::after { transform: translateX(4px); }
+    @media (max-width: 992px) {
+        .path-split__grid { grid-template-columns: 1fr; gap: 14px; }
+        .path-door { min-height: 150px; }
+    }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "JZPMU — Студия перманентного макияжа",
+      "description": "Перманентный макияж бровей, губ, межресничка, пирсинг, тату, скайсы в Барнауле. Обучение мастеров ПМ.",
+      "url": "https://jzpmu.ru/",
+      "image": "https://jzpmu.ru/photos/brows-new.jpg",
+      "telephone": "+7-923-162-15-17",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Малахова, 148",
+        "addressLocality": "Барнаул",
+        "addressRegion": "Алтайский край",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.3466,
+        "longitude": 83.7691
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "priceRange": "₽₽",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Перманент бровей", "description": "Более 6 авторских техник под любой тип кожи и форму лица"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Перманент губ", "description": "Авторские техники перманентного макияжа губ"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Межресничка", "description": "Перманентная прорисовка межресничного пространства"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Тату", "description": "Мини-тату и художественные татуировки"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Пирсинг", "description": "Профессиональный пирсинг"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Скайсы", "description": "Украшения для зубов"}}
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./logo.svg" alt="Джейзи Перманент — Студия и школа" class="logo-mark">
+                <!-- Десктоп: одна строка -->
+                <div class="logo-text logo-text--desktop">Джейзи Перманент — Студия и школа</div>
+                <!-- Мобайл: divider + две строки -->
+                <div class="logo-divider"></div>
+                <div class="logo-name-mobile">
+                    <span class="logo-name__primary">Джейзи Перманент</span>
+                    <span class="logo-name__secondary">Студия и школа</span>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#services">Услуги</a>
+                <a href="#masters">Мастера</a>
+                <a href="academy-preview.html">Обучение</a>
+                <a href="#contacts">Контакты</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+                <a href="#fitting" class="nav-gift"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13"/><path d="M3 12h18"/><path d="M12 8a4 4 0 00-4-4c-1.5 0-3 1-3 3s2 3 4 3"/><path d="M12 8a4 4 0 014-4c1.5 0 3 1 3 3s-2 3-4 3"/></svg>Подарок</a>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="https://t.me/jzpmu" class="btn-icon nav-tg" target="_blank">Tg</a>
+                <a href="https://dkd.su/1000288" class="btn-pill primary nav-book" target="_blank">Записаться</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+    <!-- STICKY-БАР (мобайл) -->
+    <div class="sticky-bar" id="sticky-bar" aria-hidden="true">
+        <div class="sticky-bar__inner">
+            <a href="https://t.me/jzpmu" class="sticky-tg" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+                <div class="sticky-tg__circle">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.04 9.613c-.15.674-.544.838-1.103.52l-3.04-2.24-1.467 1.412c-.162.162-.298.298-.612.298l.218-3.092 5.632-5.09c.245-.218-.054-.338-.38-.12L7.24 14.48l-3.01-.94c-.654-.204-.667-.654.137-.97l11.73-4.524c.544-.196 1.02.12.844.97z"/>
+                    </svg>
+                </div>
+                <div class="sticky-tg__text">
+                    <span class="sticky-tg__label">Telegram</span>
+                    <span class="sticky-tg__sub">Написать нам</span>
+                </div>
+            </a>
+            <a href="https://dkd.su/1000288" class="sticky-btn-book" target="_blank">Записаться</a>
+        </div>
+    </div>
+
+    <!-- МОБИЛЬНОЕ МЕНЮ -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+        <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#masters">Мастера</a>
+            <a href="academy-preview.html">Обучение</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#faq">FAQ</a>
+            <a href="#fitting" class="mobile-gift-link">Подарок</a>
+            <a href="https://t.me/jzpmu" target="_blank">Telegram</a>
+        </nav>
+    </div>
+
+    <!-- КНОПКА НАВЕРХ -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">↑</button>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-badge">Барнаул</div>
+                    <h1>Перманентный макияж, который не нужно скрывать</h1>
+                    <p>Премиум-пигменты без ухода в нежелательные оттенки. Одноразовые материалы, современные техники, естественный результат.</p>
+
+                    <div class="hero-buttons">
+                        <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                        <a href="#services" class="btn-pill">Смотреть услуги</a>
+                    </div>
+
+                    <div class="hero-dolyami" onclick="openDolyamiModal('Перманентный макияж', 12500)" role="button" tabindex="0" aria-label="Оплата Долями — на 4 части без переплат">
+                        <img class="hero-dolyami__logo" src="./photos/dolyami-logo-black.svg" alt="Долями">
+                        <span class="hero-dolyami__txt"><b>Оплата на 4 части</b> <i>— без переплат и процентов</i></span>
+                    </div>
+
+                    <div class="hero-facts">
+                        <div class="hero-fact">
+                            <div class="hero-fact-number">6+</div>
+                            <div class="hero-fact-label">Лет опыта</div>
+                        </div>
+                        <div class="hero-fact">
+                            <div class="hero-fact-number">3000+</div>
+                            <div class="hero-fact-label">Клиентов</div>
+                        </div>
+                        <div class="hero-fact">
+                            <div class="hero-fact-number">100+</div>
+                            <div class="hero-fact-label">Учеников</div>
+                        </div>
+                        <div class="hero-fact hero-fact--warranty" onclick="openModal('warranty')">
+                            <div class="hero-fact-number">✓</div>
+                            <div class="hero-fact-warranty-text">
+                                <div class="hero-fact-label">Гарантия</div>
+                                <div class="hero-fact-sub">на перманентный макияж</div>
+                            </div>
+                            <div class="hero-fact-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-img-container">
+                    <video class="hero-img" autoplay muted loop playsinline poster="./photos/hero-poster.jpg" preload="metadata" style="object-fit: cover;">
+                        <source src="./photos/hero-video.mp4" type="video/mp4">
+                    </video>
+                    <div class="hero-img-badges">
+                        <div class="hero-img-badge">
+                            <div class="hero-img-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                            <div class="hero-img-badge-text">
+                                5.0 на 2ГИС
+                                <span>177 оценок</span>
+                            </div>
+                        </div>
+                        <a href="https://yandex.ru/maps" target="_blank" rel="noopener" class="hero-img-badge hero-img-badge--yandex">
+                            <img src="./photos/good-place-badge.jpg" alt="Яндекс Карты — Хорошее место 2026" width="28" height="28" style="border-radius: 6px;">
+                            <div class="hero-img-badge-text">
+                                Хорошее место
+                                <span>Яндекс 2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗВИЛКА: услуга / обучение -->
+    <section class="path-split">
+        <div class="container">
+            <div class="path-split__grid">
+                <a href="#services" class="path-door">
+                    <img class="path-door__img" src="./photos/lips-new.jpg" alt="Услуги студии" style="object-position: center 55%;">
+                    <div class="path-door__body">
+                        <div class="path-door__eyebrow">Я клиент</div>
+                        <div class="path-door__title">Услуги студии</div>
+                        <div class="path-door__sub">Перманент, осветление, пирсинг, тату, ламинирование</div>
+                        <span class="path-door__cta">Выбрать услугу</span>
+                    </div>
+                </a>
+                <a href="academy-preview.html" class="path-door">
+                    <img class="path-door__img" src="./photos/academy-poster.jpg" alt="Обучение в академии" style="object-position: center 30%;">
+                    <div class="path-door__body">
+                        <div class="path-door__eyebrow">Хочу учиться</div>
+                        <div class="path-door__title">Обучение в академии</div>
+                        <div class="path-door__sub">Профессия мастера ПМ с нуля: стажировка и трудоустройство</div>
+                        <span class="path-door__cta">Узнать о курсе</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Услуги студии</h2>
+                <span>Services</span>
+            </div>
+            <p style="text-align:center;color:var(--text-muted);font-size:14px;margin:-6px auto 28px;max-width:540px;">Нажмите на услугу — техники, фото и цены. Записаться можно онлайн или в один клик в Telegram.</p>
+
+            <div class="services-grid">
+
+                <div class="card" onclick="openModal('brows')">
+                    <img loading="lazy" class="card-img" src="./photos/brows-new.jpg" width="380" height="200" alt="Перманент бровей / долговременное окрашивание" style="object-position: center 28%;">
+                    <h3>Перманент бровей / долговременное окрашивание</h3>
+                    <p>Более 6 авторских техник под любой тип кожи и форму лица. Премиум-пигменты, которые не уходят в нежелательные оттенки.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 2 500 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('lips')">
+                    <img loading="lazy" class="card-img" src="./photos/lips-new.jpg" width="380" height="200" alt="Перманент губ" style="object-position: center 62%;">
+                    <h3>Перманент губ</h3>
+                    <p>Более 6 авторских техник: восстановление контура, придание объема и сочности, маскировка асимметрии.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 2 500 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('eyes')">
+                    <img loading="lazy" class="card-img" src="./photos/eyes-mezhresn.jpg" width="380" height="200" alt="Межресничка" style="object-position: center center; object-fit: cover;">
+                    <h3>Межресничка</h3>
+                    <p>Делает взгляд выразительнее. Заполнение межресничного пространства — эффект густых ресниц без макияжа.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 3 500 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card accent" onclick="openModal('removal')">
+                    <img loading="lazy" class="card-img" src="./photos/removal-new.jpg" width="380" height="200" alt="Осветление пигмента" style="object-position: center 40%;">
+                    <h3>Осветление пигмента</h3>
+                    <p>Бережно удаляем старый татуаж и чужие ошибки. Лазер и ремувер — без ожогов и рубцов.</p>
+                    <div class="card-bottom">
+                        <div class="card-price" style="color: var(--accent-gold);">от 2 700 ₽</div>
+                        <div class="card-arrow" style="border-color: rgba(255,255,255,0.2);">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('piercing')">
+                    <img loading="lazy" class="card-img" src="./photos/piercing-new.jpg" width="380" height="200" alt="Установка украшений" style="object-position: center 22%;">
+                    <h3>Установка украшений</h3>
+                    <p>22 вида проколов. Делаем установку украшений правильно. Безопасно и стерильно.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 900 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('lami')">
+                    <img loading="lazy" class="card-img" src="./photos/lami-new.jpg" width="380" height="200" alt="Брови и ресницы" style="object-position: center 28%;">
+                    <h3>Брови и ресницы</h3>
+                    <p>Ламинирование, архитектура и окрашивание. Уходовые процедуры для выразительного взгляда.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 800 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('tattoo')">
+                    <img loading="lazy" class="card-img" src="./photos/tattoo-new.jpg" width="380" height="200" alt="Тату" style="object-position: center 30%;">
+                    <h3>Тату</h3>
+                    <p>Индивидуальный дизайн по вашему эскизу. Подробности обсуждаем в личном общении.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 3 500 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModal('skyce')">
+                    <img loading="lazy" class="card-img" src="./photos/skyce-new.jpg" width="380" height="200" alt="Скайсы" style="object-position: center;">
+                    <h3>Скайсы</h3>
+                    <p>Украшение на зубы — модный аксессуар для яркой улыбки.</p>
+                    <div class="card-bottom">
+                        <div class="card-price">от 1 000 ₽</div>
+                        <div class="card-arrow">→</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- ПОЧЕМУ JZPMU (доверие) -->
+    <section id="why" style="padding: 70px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему выбирают JZPMU</h2>
+                <span>Why us</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+                <div onclick="openModal('warranty')" style="cursor:pointer;background:var(--bg-card);border:1px solid var(--border-line);border-radius:20px;padding:28px 26px;">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--accent-gold);line-height:1;margin-bottom:12px;">✓</div>
+                    <h3 style="font-size:20px;margin-bottom:8px;">Гарантия на результат</h3>
+                    <p style="color:var(--text-muted);font-size:14px;line-height:1.6;">1 месяц с даты коррекции — безвозмездно устраним недостатки. Условия →</p>
+                </div>
+                <div style="background:var(--bg-card);border:1px solid var(--border-line);border-radius:20px;padding:28px 26px;">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--accent-gold);line-height:1;margin-bottom:12px;">01</div>
+                    <h3 style="font-size:20px;margin-bottom:8px;">Только одноразовые материалы</h3>
+                    <p style="color:var(--text-muted);font-size:14px;line-height:1.6;">Каждый инструмент используется один раз — стерильно и безопасно.</p>
+                </div>
+                <div style="background:var(--bg-card);border:1px solid var(--border-line);border-radius:20px;padding:28px 26px;">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--accent-gold);line-height:1;margin-bottom:12px;">6+</div>
+                    <h3 style="font-size:20px;margin-bottom:8px;">Более 6 авторских техник</h3>
+                    <p style="color:var(--text-muted);font-size:14px;line-height:1.6;">Подбираем под тип кожи и форму лица. Премиум-пигменты не уходят в нежелательные оттенки.</p>
+                </div>
+                <div style="background:var(--bg-dark);border-radius:20px;padding:28px 26px;">
+                    <div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--accent-gold);line-height:1;margin-bottom:12px;">5.0</div>
+                    <h3 style="font-size:20px;margin-bottom:8px;color:#fff;">Признание клиентов</h3>
+                    <p style="color:rgba(255,255,255,.7);font-size:14px;line-height:1.6;">5.0 на 2ГИС · «Хорошее место» Яндекс · 6+ лет · 3000+ клиентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- МАСТЕРА -->
+    <section id="masters" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наши мастера</h2>
+                <span>Masters</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
+                <div style="background: var(--bg-card); border-radius: var(--radius-box); padding: 30px; text-align: center;">
+                    <img src="./photos/master-yulia.jpg" alt="Юлия Заматаева" loading="lazy" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block;">
+                    <h3 style="font-size: 22px; margin-bottom: 8px;">Юлия Заматаева</h3>
+                    <p style="color: var(--accent); font-size: 13px; margin-bottom: 12px;">Основатель · Топ-мастер</p>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Основатель студии JZPMU. 6+ лет в перманентном макияже. Авторские техники бровей и губ. Обучила более 100 мастеров.</p>
+                </div>
+                <div style="background: var(--bg-card); border-radius: var(--radius-box); padding: 30px; text-align: center;">
+                    <img src="./photos/master-karina.jpg" alt="Карина Булашко" loading="lazy" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block;">
+                    <h3 style="font-size: 22px; margin-bottom: 8px;">Карина Булашко</h3>
+                    <p style="color: var(--accent); font-size: 13px; margin-bottom: 12px;">Мастер</p>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Специалист по перманентному макияжу, оформлению бровей и ламинированию бровей и ресниц.</p>
+                </div>
+                <div style="background: var(--bg-card); border-radius: var(--radius-box); padding: 30px; text-align: center;">
+                    <img src="./photos/master-veronika.jpg" alt="Вероника Маткова" loading="lazy" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin: 0 auto 20px; display: block;">
+                    <h3 style="font-size: 22px; margin-bottom: 8px;">Вероника Маткова</h3>
+                    <p style="color: var(--accent); font-size: 13px; margin-bottom: 12px;">Мастер</p>
+                    <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6;">Специалист по оформлению бровей, ламинированию бровей и ресниц, осветлению пигмента.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <h2>Отзывы наших клиентов</h2>
+                <p>Реальные впечатления от наших услуг</p>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-01.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-02.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-03.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-04.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-05.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-06.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-07.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                    <div class="review-slide">
+                        <img loading="lazy" src="./photos/client-08.png" width="335" height="500" alt="Отзыв клиента" class="review-image">
+                    </div>
+                </div>
+
+                <div class="review-dots">
+                    <span class="review-dot active" data-slide="0"></span>
+                    <span class="review-dot" data-slide="1"></span>
+                    <span class="review-dot" data-slide="2"></span>
+                    <span class="review-dot" data-slide="3"></span>
+                    <span class="review-dot" data-slide="4"></span>
+                    <span class="review-dot" data-slide="5"></span>
+                    <span class="review-dot" data-slide="6"></span>
+                    <span class="review-dot" data-slide="7"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЕСПЛАТНАЯ ПРИМЕРКА ФОРМЫ -->
+    <section class="fitting-section" id="fitting">
+        <div class="container">
+            <div class="fitting-card">
+                <div class="fitting-content">
+                    <h2>Бесплатная примерка формы</h2>
+                    <p>Не знаете, какая форма бровей или губ вам подойдёт? Приходите на бесплатную примерку! Мастер нарисует эскиз, подберёт идеальную форму и ответит на все вопросы.</p>
+                    
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" style="display: inline-flex;" target="_blank">Записаться на бесплатную примерку формы</a>
+                </div>
+
+                <div class="fitting-features">
+                    <div class="fitting-feature">Профессиональная консультация мастера</div>
+                    <div class="fitting-feature">Подбор формы под ваши черты лица</div>
+                    <div class="fitting-feature">Эскиз с визуализацией результата</div>
+                    <div class="fitting-feature">Без обязательств записываться на процедуру</div>
+                    <div class="fitting-feature">Абсолютно бесплатно</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Частые вопросы</h2>
+                <span>FAQ</span>
+            </div>
+
+            <div class="faq-grid">
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Больно ли делать перманент?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Мы используем качественную анестезию, которая делает процедуру комфортной. Ощущения индивидуальны — большинство клиентов описывают их как лёгкое покалывание. Зона губ чуть чувствительнее, чем брови.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Сбриваются ли волоски при ПМ бровей?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Нет, мы работаем между волосками, не затрагивая их. Ваши натуральные брови остаются нетронутыми, а перманент создаёт красивый фон.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Какие противопоказания?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Беременность, кормление грудью, сахарный диабет, онкология, кожные заболевания в зоне процедуры, герпес в активной фазе, приём антикоагулянтов. Полный список обсуждаем на консультации.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Нужно ли делать коррекцию?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Да, коррекция через 4-6 недель входит в процесс. Она нужна для закрепления результата — кожа по-разному принимает пигмент, и коррекция позволяет довести работу до идеала.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Сколько времени заживает?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Активное заживление — 5-7 дней (образование и отхождение корочек). Полное восстановление цвета — до 4 недель. Выдаём подробную памятку по уходу.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Как ухаживать за зоной ПМ?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Первые дни: не мочить, не распаривать, не трогать руками, обрабатывать заживляющим средством. Подробную инструкцию выдаём после процедуры и остаёмся на связи.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Насколько хватает эффекта?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">От 1 до 3 лет в зависимости от типа кожи, образа жизни и ухода. Жирная кожа держит пигмент меньше, сухая — дольше. Рефреш раз в 1-2 года поддержит яркость.</div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">Я нашла ПМ дешевле. Почему у вас такие цены?</div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Мы используем премиум-пигменты, которые гарантированно не уходят в синий, красный или серый. Только одноразовые материалы. 7+ лет опыта и постоянное обучение. Цена — это инвестиция в результат на годы.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- ДОЛЯМИ ПРОМО -->
+    <div class="container" style="padding-bottom: 0; padding-top: 20px;">
+        <div class="dolyami-promo" onclick="openDolyamiModal('Перманент бровей / губ (Топ-мастер)', 12500)">
+            <div class="dolyami-promo-left">
+                <span class="dolyami-badge" style="margin:0;padding:8px 14px;">
+                    <img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white" style="height:16px;">
+                    <img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black" style="height:16px;">
+                </span>
+                <div class="dolyami-promo-text">
+                    <span class="dolyami-promo-title">Оплата Долями — без переплат</span>
+                    <span class="dolyami-promo-sub">Разделите стоимость процедуры на 4 равных платежа</span>
+                </div>
+            </div>
+            <span class="dolyami-promo-arrow">→</span>
+        </div>
+    </div>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contacts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Контакты</h2>
+                <span>Contacts</span>
+            </div>
+
+            <div class="contacts-grid">
+                <div>
+                    <div class="contact-card">
+                        <h3>Барнаул</h3>
+                        <div class="contact-info">
+                            <strong>БЦ «Форум»</strong><br>
+                            ул. Гоголя, 36<br>
+                            Этаж 2, офис 202<br><br>
+                            <strong>Режим работы:</strong><br>
+                            Ежедневно 09:00–22:00<br>
+                            по предварительной записи<br><br>
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+79956607669" style="color: var(--accent); font-weight: 500;">+7 995 660-76-69</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Записаться на визит</h3>
+                    <form id="contactForm" onsubmit="return submitToTelegram(event)" novalidate>
+                        <div class="form-group">
+                            <label for="formName">Имя</label>
+                            <input type="text" id="formName" name="name" autocomplete="name" placeholder="Ваше имя" required>
+                            <span class="form-error" id="formNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="formPhone">Телефон</label>
+                            <input type="tel" id="formPhone" name="phone" autocomplete="tel" placeholder="Телефон" required>
+                            <span class="form-error" id="formPhoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="formService">Услуга</label>
+                            <select id="formService" name="service">
+                                <option value="">Выберите услугу</option>
+                                <option value="Перманент бровей / долговременное окрашивание">Перманент бровей / долговременное окрашивание</option>
+                                <option value="Перманент губ">Перманент губ</option>
+                                <option value="Межресничка">Межресничка</option>
+                                <option value="Осветление пигмента">Осветление пигмента</option>
+                                <option value="Установка украшений">Установка украшений</option>
+                                <option value="Брови и ресницы">Брови и ресницы</option>
+                                <option value="Тату">Тату</option>
+                                <option value="Скайсы">Скайсы</option>
+                                <option value="Обучение">Обучение</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formComment">Комментарий</label>
+                            <textarea id="formComment" name="comment" placeholder="Комментарий (необязательно)"></textarea>
+                        </div>
+                        <label class="consent-label">
+                            <input type="checkbox" id="formConsent" required>
+                            <span>Даю согласие на <a href="privacy.html" target="_blank">обработку персональных данных</a> в соответствии с ФЗ-152</span>
+                        </label>
+                        <button type="submit" class="form-submit" id="formSubmitBtn">Отправить заявку</button>
+                    </form>
+
+                    <div class="form-messengers">
+                        <a href="https://t.me/jzpmu" class="messenger-btn" target="_blank">Telegram</a>
+                        <a href="https://wa.me/79956607669" class="messenger-btn" target="_blank">WhatsApp</a>
+                        <a href="https://max.ru/id668500699202_biz" class="messenger-btn" target="_blank">Max</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- АКАДЕМИЯ — кросс-сейл -->
+    <section id="academy" style="padding: 10px 0 76px;">
+        <div class="container">
+            <div style="background:var(--bg-dark);border-radius:24px;padding:42px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;">
+                <div style="max-width:580px;">
+                    <div style="color:var(--accent-gold);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;">Академия JZPMU</div>
+                    <h2 style="color:#fff;font-size:30px;margin-bottom:10px;line-height:1.15;">Хотите освоить профессию мастера ПМ?</h2>
+                    <p style="color:rgba(255,255,255,.7);font-size:15px;line-height:1.6;">Обучение с нуля, оплачиваемая стажировка и трудоустройство в студии.</p>
+                </div>
+                <a href="academy-preview.html" class="btn-pill" style="background:var(--accent-gold);color:#fff;border:none;white-space:nowrap;">Узнать об обучении →</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img loading="lazy" src="./logo.svg" alt="Джейзи Перманент — Студия и школа" class="logo-mark">
+                        <div class="logo-divider"></div>
+                        <div class="logo-name-mobile">
+                            <span class="logo-name__primary">Джейзи Перманент</span>
+                            <span class="logo-name__secondary">Студия и школа</span>
+                        </div>
+                    </div>
+                    <p>Студия и школа перманентного макияжа. Заботимся о вашей красоте и здоровье с 2020 года.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#services">Перманент бровей</a></li>
+                        <li><a href="#services">Перманент губ</a></li>
+                        <li><a href="#services">Межресничка</a></li>
+                        <li><a href="#services">Осветление пигмента</a></li>
+                        <li><a href="#services">Установка украшений</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Обучение</h4>
+                    <ul>
+                        <li><a href="#academy">С нуля до профи</a></li>
+                        <li><a href="#academy">Повышение квалификации</a></li>
+                        <li><a href="#academy">Курс по пирсингу</a></li>
+                        <li><a href="#academy">Курс по тату</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79956607669">+7 995 660-76-69</a></li>
+                        <li><a href="https://t.me/jzpmu" target="_blank">Telegram</a></li>
+                        <li><a href="https://max.ru/id668500699202_biz" target="_blank">Max</a></li>
+                        <li><a href="https://wa.me/79956607669" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-brand-link-wrap">
+                <a href="brand.html" class="footer-brand-link">
+                    <span class="footer-brand-link__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </span>
+                    Маркетинговые материалы для партнёров
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    © 2026 JZPMU. ИП Заматаева Ю.В. · ИНН 668500699202 · ОГРНИП 324665800015670 · <a href="privacy.html" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:2px;">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://t.me/jzpmu" target="_blank">Tg</a>
+                    <a href="https://max.ru/id668500699202_biz" target="_blank">Max</a>
+                    <a href="https://wa.me/79956607669" target="_blank">Wa</a>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:20px;">
+                <a href="http://papina.team" target="_blank" rel="noopener" style="display:inline-flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;transition:opacity .3s;" onmouseover="this.style.opacity='.65'" onmouseout="this.style.opacity='1'">
+                    <span style="font-size:10px;color:var(--text-muted);letter-spacing:.05em;">Создание сайта</span>
+                    <span style="display:inline-flex;align-items:center;gap:1px;">
+                        <span style="font-family:'Arial Black',sans-serif;font-size:16px;font-weight:900;color:var(--text-main);letter-spacing:1px;">ПАПИНА</span>
+                        <span style="width:5px;height:5px;border-radius:50%;background:#FF4D00;display:inline-block;animation:papina-dot 2.5s infinite;"></span>
+                    </span>
+                </a>
+            </div>
+            <style>@keyframes papina-dot{0%,100%{opacity:1}50%{opacity:.3}}</style>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНЫЕ ОКНА -->
+    <div class="modal-overlay" id="modal-brows">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Перманент бровей / Долговременное окрашивание</h3>
+                <button class="modal-close" onclick="closeModal('brows')">×</button>
+            </div>
+            <div class="modal-body">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 25px;">
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Графика</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/brows-grafika-1.jpg" alt="До">
+                        <img loading="lazy" src="./photos/brows-grafika-2.jpg" alt="Брови — графика">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Мягкая графика</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/brows-soft-grafika-2.jpg" alt="До">
+                        <img loading="lazy" src="./photos/brows-soft-grafika-1.jpg" alt="Брови — мягкая графика">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Четкий низ — мягкий верх</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/brows-chetkiy-niz-2.jpg" alt="До">
+                        <img loading="lazy" src="./photos/brows-chetkiy-niz-1.jpg" alt="Брови — четкий низ мягкий верх">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item">
+                        <span class="before-after__label">Модельные брови</span>
+                        <img loading="lazy" src="./photos/brows-modelnye-1.jpg" alt="Брови — модельные">
+                    </div>
+                    <div class="before-after__item">
+                        <span class="before-after__label">Волоски + напыление</span>
+                        <img loading="lazy" src="./photos/brows-voloski-1.jpg" alt="Брови — волоски + напыление">
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Перекрытие</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/brows-perekrytie-1.jpg" alt="До">
+                        <img loading="lazy" src="./photos/brows-perekrytie-2.jpg" alt="Брови — перекрытие">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                </div>
+
+                <table class="price-table">
+                    <tr>
+                        <th>Категория</th>
+                        <th>Процедура</th>
+                        <th>Коррекция</th>
+                    </tr>
+                    <tr>
+                        <td>Стажер / ученица *</td>
+                        <td>от 2 500 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер</td>
+                        <td>6 500 ₽</td>
+                        <td>3 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-профи</td>
+                        <td>9 000 ₽</td>
+                        <td>4 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Топ-мастер Юлия</td>
+                        <td>12 500 ₽</td>
+                        <td>6 000 ₽</td>
+                    </tr>
+                </table>
+
+                <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
+
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Перманент бровей (Топ-мастер)', 12500)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 3 125 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                    <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на примерку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-lips">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Перманент губ</h3>
+                <button class="modal-close" onclick="closeModal('lips')">×</button>
+            </div>
+            <div class="modal-body">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 25px;">
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">3D / амбре</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/lips-before-after-2.jpg" alt="До">
+                        <img loading="lazy" src="./photos/lips-before-after-1.jpg" alt="Губы — 3D техника">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Натуральная</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/lips-naturalnaya-2.jpg" alt="До">
+                        <img loading="lazy" src="./photos/lips-naturalnaya-1.jpg" alt="Губы — натуральная техника">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Акварельная</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/lips-akvarelnaya-1.jpg" alt="До">
+                        <img loading="lazy" src="./photos/lips-akvarelnaya-2.jpg" alt="Губы — акварельная техника">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item photo-toggle">
+                        <span class="before-after__label">Помадная</span>
+                        <img loading="lazy" class="photo-toggle__before" src="./photos/lips-pomadnaya-2.jpg" alt="До">
+                        <img loading="lazy" src="./photos/lips-pomadnaya-1.jpg" alt="Губы — помадная техника">
+                        <span class="photo-toggle__hint">зажми</span>
+                    </div>
+                    <div class="before-after__item">
+                        <span class="before-after__label">Кока-кола</span>
+                        <img loading="lazy" src="./photos/lips-coca-cola-1.jpg" alt="Губы — эксклюзивный цвет кока-кола">
+                    </div>
+                </div>
+
+                <table class="price-table">
+                    <tr>
+                        <th>Категория</th>
+                        <th>Процедура</th>
+                        <th>Коррекция</th>
+                    </tr>
+                    <tr>
+                        <td>Стажер / ученица *</td>
+                        <td>от 2 500 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер</td>
+                        <td>6 500 ₽</td>
+                        <td>3 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-профи</td>
+                        <td>9 000 ₽</td>
+                        <td>4 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Топ-мастер Юлия</td>
+                        <td>12 500 ₽</td>
+                        <td>6 000 ₽</td>
+                    </tr>
+                </table>
+
+                <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
+
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Перманент губ (Топ-мастер)', 12500)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 3 125 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                    <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на примерку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-eyes">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Межресничка</h3>
+                <button class="modal-close" onclick="closeModal('eyes')">×</button>
+            </div>
+            <div class="modal-body">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 25px;">
+                    <div class="before-after__item">
+                        <span class="before-after__label">Базовая</span>
+                        <img loading="lazy" src="./photos/eyes-bazovaya-1.jpg" alt="Базовая межресничка">
+                    </div>
+                    <div class="before-after__item">
+                        <span class="before-after__label">С растушёвкой</span>
+                        <img loading="lazy" src="./photos/eyes-rastushevka-1.jpg" alt="Межресничка с растушёвкой">
+                    </div>
+                </div>
+
+                <table class="price-table">
+                    <tr>
+                        <th>Категория</th>
+                        <th>Процедура</th>
+                        <th>Коррекция</th>
+                    </tr>
+                    <tr>
+                        <td>Стажер / ученица *</td>
+                        <td>от 2 500 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер</td>
+                        <td>4 000 ₽</td>
+                        <td>3 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Мастер-профи</td>
+                        <td>6 000 ₽</td>
+                        <td>4 500 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Топ-мастер Юлия</td>
+                        <td>8 000 ₽</td>
+                        <td>5 000 ₽</td>
+                    </tr>
+                </table>
+
+                <p class="price-note" style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">* Согласие на фото/видео для соцсетей</p>
+
+                <div class="dolyami-widget" onclick="event.stopPropagation(); openDolyamiModal('Межресничка (Топ-мастер)', 8000)" title="Узнать про оплату Долями">
+                    <span class="dolyami-badge"><img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white"><img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black"></span>
+                    <span class="dolyami-text">4 платежа по 2 000 ₽</span>
+                    <span class="dolyami-arrow">›</span>
+                </div>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                    <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на примерку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-removal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Осветление пигмента лазером / ремувером</h3>
+                <button class="modal-close" onclick="closeModal('removal')">×</button>
+            </div>
+            <div class="modal-body">
+                <table class="price-table">
+                    <tr>
+                        <th>Услуга</th>
+                        <th></th>
+                        <th>Цена</th>
+                    </tr>
+                    <tr>
+                        <td>Удаление лазером (брови)</td>
+                        <td>Без крови и шрамов</td>
+                        <td>от 2 700 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Удаление ремувером</td>
+                        <td>Бледные остатки пигмента</td>
+                        <td>от 4 200 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Удаление тату</td>
+                        <td>Цена договорная</td>
+                        <td>по запросу</td>
+                    </tr>
+                </table>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                    <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на консультацию</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-piercing">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Установка украшений</h3>
+                <button class="modal-close" onclick="closeModal('piercing')">×</button>
+            </div>
+            <div class="modal-body">
+                <table class="price-table">
+                    <tr><td>Мочка (одна)</td><td></td><td>900 ₽</td></tr>
+                    <tr><td>Обе мочки</td><td></td><td>1 200 ₽</td></tr>
+                    <tr><td>Helix</td><td></td><td>1 500 ₽</td></tr>
+                    <tr><td>Tragus</td><td></td><td>1 800 ₽</td></tr>
+                    <tr><td>Septum</td><td></td><td>2 100 ₽</td></tr>
+                    <tr><td>Industrial</td><td></td><td>1 900 ₽</td></tr>
+                    <tr><td>Smile / Антисмайл</td><td></td><td>1 700–1 800 ₽</td></tr>
+                    <tr><td>Язык</td><td></td><td>2 500 ₽</td></tr>
+                    <tr><td>Пупок</td><td></td><td>2 100 ₽</td></tr>
+                </table>
+
+                <p class="price-note">Полный прайс на все 22 вида — уточняйте у администратора</p>
+
+                <div style="margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-lami">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Брови и ресницы</h3>
+                <button class="modal-close" onclick="closeModal('lami')">×</button>
+            </div>
+            <div class="modal-body">
+                <table class="price-table">
+                    <tr><td>Архитектура и окрашивание бровей</td><td></td><td>900 ₽</td></tr>
+                    <tr><td>Коррекция без окрашивания</td><td></td><td>800 ₽</td></tr>
+                    <tr><td>Ламинирование + коррекция бровей</td><td></td><td>1 200 ₽</td></tr>
+                    <tr><td>Ламинирование + коррекция + окрашивание</td><td></td><td>1 500 ₽</td></tr>
+                    <tr><td>Ламинирование + окрашивание ресниц</td><td></td><td>1 800 ₽</td></tr>
+                    <tr><td>Мужская коррекция бровей</td><td></td><td>900 ₽</td></tr>
+                    <tr><td>Удаление волос на лице (зона)</td><td></td><td>300 ₽</td></tr>
+                </table>
+
+                <div style="margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-tattoo">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Тату</h3>
+                <button class="modal-close" onclick="closeModal('tattoo')">×</button>
+            </div>
+            <div class="modal-body">
+                <table class="price-table">
+                    <tr><td>Тату (индивидуально)</td><td></td><td>от 3 500 ₽</td></tr>
+                </table>
+
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться на процедуру</a>
+                    <a href="https://dkd.su/1000288" class="btn-pill" target="_blank">Записаться на консультацию</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-skyce">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Скайсы</h3>
+                <button class="modal-close" onclick="closeModal('skyce')">×</button>
+            </div>
+            <div class="modal-body">
+                <table class="price-table">
+                    <tr><td>Первый скайс</td><td></td><td>1 000 ₽</td></tr>
+                    <tr><td>Каждый последующий</td><td></td><td>790 ₽</td></tr>
+                </table>
+
+                <div style="margin-top: 20px;">
+                    <a href="https://dkd.su/1000288" class="btn-pill primary" target="_blank">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-warranty">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Гарантия на результат перманентного макияжа</h3>
+                <button class="modal-close" onclick="closeModal('warranty')">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">
+                    ИП Заматаева Ю.В. предоставляет гарантию на результат перманентного макияжа сроком <strong>1 месяц с даты коррекции</strong>, в течение которой обязуется безвозмездно устранить недостатки, не вызванные:
+                </p>
+                
+                <ul style="margin-bottom: 20px; padding-left: 20px;">
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">нарушением послепроцедурного ухода</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">механическими повреждениями</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">индивидуальными особенностями организма</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">самостоятельным вмешательством клиента</li>
+                </ul>
+
+                <p class="modal-description">
+                    Гарантия действует исключительно для услуг, выполненных действующими мастерами студии, осуществляющими деятельность от имени Исполнителя.
+                </p>
+
+                <p class="modal-description" style="margin-top: 15px;">
+                    <strong>Гарантия не распространяется на:</strong>
+                </p>
+                
+                <ul style="margin-bottom: 20px; padding-left: 20px;">
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">процедуры, выполненные мастерами на стажировке после обучения</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">процедуры, выполненные обучающимися мастерами под руководством тренера</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">услуги моделям в рамках контента, мастер-классов и показательных процедур</li>
+                    <li style="margin-bottom: 8px; color: var(--text-muted); line-height: 1.6;">демонстрационные процедуры в рамках обучающих программ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ЭКСКУРСИЯ: модалка-книга -->
+    <div class="excursion-modal-overlay" id="excursionModal">
+        <div class="excursion-modal">
+            <button class="excursion-modal__close" onclick="closeExcursion()">&times;</button>
+            <div class="excursion-modal__viewer">
+                <img loading="lazy" id="excursionImg" src="./excursion/page-01.jpg" alt="Экскурсия по обучению">
+            </div>
+            <div class="excursion-modal__nav">
+                <button id="excPrev" onclick="excursionNav(-1)">&#8592;</button>
+                <span class="excursion-modal__counter" id="excCounter">1 / 30</span>
+                <button id="excNext" onclick="excursionNav(1)">&#8594;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДОЛЯМИ (стиль официального виджета) -->
+    <div class="dolyami-modal-overlay" id="dolyami-modal">
+        <div class="modal" style="max-width: 480px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 28px 28px 0;">
+                <span class="dolyami-badge" style="margin:0; padding: 8px 14px;">
+                    <img src="photos/dolyami-logo-white.svg" alt="Долями" class="dolyami-logo-white" style="height:16px;">
+                    <img src="photos/dolyami-logo-black.svg" alt="Долями" class="dolyami-logo-black" style="height:16px;">
+                </span>
+                <button class="modal-close" onclick="closeDolyamiModal()">×</button>
+            </div>
+            <div style="padding: 20px 28px 28px;">
+                <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.2;">Разделите стоимость покупки</h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">Заплатите сейчас только часть, а оставшееся будем списывать каждые две недели</p>
+
+                <div style="display: flex; gap: 24px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                        <span style="font-size: 13px; color: var(--text-main);">Как обычная оплата картой</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+                        <span style="font-size: 13px; color: var(--text-main);">Без кредитного договора</span>
+                    </div>
+                </div>
+
+                <div style="background: #F5F5F5; border-radius: 12px; padding: 20px; margin-bottom: 20px;">
+                    <div id="dolyami-service-name" style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;"></div>
+                    <div style="font-size: 22px; font-weight: 700; color: #1A1A1A; margin-bottom: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;" id="dolyami-now"></div>
+                    <div style="font-size: 14px; color: var(--text-muted); margin-bottom: 14px;" id="dolyami-then"></div>
+                    <div style="display: flex; gap: 4px;">
+                        <div style="flex:1; height: 4px; background: #3B82F6; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                        <div style="flex:1; height: 4px; background: #E0E0E0; border-radius: 2px;"></div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-bottom: 20px;">
+                    <a href="https://dolyame.ru" target="_blank" style="color: #3B82F6; font-size: 13px; text-decoration: none;">Подробнее о сервисе можно узнать на dolyame.ru</a>
+                </p>
+
+                <div class="dolyami-modal-note">
+                    <p>Пока у нас нет онлайн-оформления Долями, но <strong>напишите нам в Max</strong> — мы поможем оформить оплату Долями в два клика!</p>
+                </div>
+
+                <a href="https://max.ru/u/f9LHodD0cOLAAaqT882mCdaaWPJ9N4AajNcrzfgKehyu_iHxxquaYCgdXhI" target="_blank" class="btn-pill primary" style="display: block; text-align: center; margin-top: 16px; width: 100%;">Написать в Max</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatDolyamiPrice(n) {
+            return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+        }
+        function openDolyamiModal(serviceName, price) {
+            ym(108553725, 'reachGoal', 'click_dolyami');
+            var payment = price / 4;
+            var fp = formatDolyamiPrice(payment);
+            document.getElementById('dolyami-service-name').textContent = serviceName || '';
+            document.getElementById('dolyami-now').textContent = fp + ' ₽ сейчас';
+            document.getElementById('dolyami-then').textContent = 'Затем по ' + fp + ' ₽ раз в 2 недели';
+            document.getElementById('dolyami-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeDolyamiModal() {
+            document.getElementById('dolyami-modal').classList.remove('active');
+            if (!document.querySelector('.modal-overlay.active')) document.body.style.overflow = '';
+        }
+        document.getElementById('dolyami-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeDolyamiModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('dolyami-modal').classList.contains('active')) {
+                closeDolyamiModal();
+            }
+        });
+    </script>
+
+    <script>
+        // Sticky-бар: появляется после прокрутки 200px (только <=1024px)
+        const stickyBar = document.getElementById('sticky-bar');
+        function updateStickyBar() {
+            if (!stickyBar) return;
+            const isMobile = window.innerWidth <= 1024;
+            const scrolledEnough = window.pageYOffset > 200;
+            const show = isMobile && scrolledEnough;
+            stickyBar.classList.toggle('is-visible', show);
+            stickyBar.setAttribute('aria-hidden', String(!show));
+        }
+        window.addEventListener('scroll', updateStickyBar);
+        window.addEventListener('resize', updateStickyBar);
+        updateStickyBar();
+
+        // === Фото до/после: зажми = до, отпусти = после ===
+        document.querySelectorAll('.photo-toggle').forEach(function(el) {
+            function press() { el.classList.add('is-pressed'); }
+            function release() { el.classList.remove('is-pressed'); }
+            el.addEventListener('mousedown', press);
+            el.addEventListener('mouseup', release);
+            el.addEventListener('mouseleave', release);
+            el.addEventListener('touchstart', function(e) { e.preventDefault(); press(); }, {passive: false});
+            el.addEventListener('touchend', release);
+            el.addEventListener('touchcancel', release);
+        });
+
+        // === Экскурсия: модалка-книга ===
+        let excCurrentPage = 1;
+        const excTotalPages = 30;
+        // Предзагрузка всех изображений при первом открытии
+        const excImages = [];
+        function preloadNearby(page) {
+            for (let i = Math.max(1, page - 1); i <= Math.min(excTotalPages, page + 2); i++) {
+                if (!excImages[i]) {
+                    excImages[i] = new Image();
+                    excImages[i].src = './excursion/page-' + String(i).padStart(2, '0') + '.jpg';
+                }
+            }
+        }
+        function openExcursion() {
+            excCurrentPage = 1;
+            preloadNearby(1);
+            updateExcursionPage();
+            document.getElementById('excursionModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeExcursion() {
+            document.getElementById('excursionModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function excursionNav(dir) {
+            var newPage = excCurrentPage + dir;
+            if (newPage < 1 || newPage > excTotalPages) return;
+            excCurrentPage = newPage;
+            preloadNearby(newPage);
+            updateExcursionPage();
+        }
+        function updateExcursionPage() {
+            var num = String(excCurrentPage).padStart(2, '0');
+            var imgEl = document.getElementById('excursionImg');
+            imgEl.src = './excursion/page-' + num + '.jpg';
+            document.getElementById('excCounter').textContent = excCurrentPage + ' / ' + excTotalPages;
+            document.getElementById('excPrev').disabled = excCurrentPage === 1;
+            document.getElementById('excNext').disabled = excCurrentPage === excTotalPages;
+        }
+        // Закрытие по клику на оверлей
+        document.getElementById('excursionModal').addEventListener('click', function(e) {
+            if (e.target === this) closeExcursion();
+        });
+        // Клавиатурная навигация
+        document.addEventListener('keydown', function(e) {
+            var modal = document.getElementById('excursionModal');
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeExcursion();
+            if (e.key === 'ArrowRight') excursionNav(1);
+            if (e.key === 'ArrowLeft') excursionNav(-1);
+        });
+        // Свайпы для мобильных
+        (function() {
+            var touchStartX = 0;
+            var touchStartY = 0;
+            var modal = document.getElementById('excursionModal');
+            modal.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+                touchStartY = e.changedTouches[0].screenY;
+            }, {passive: true});
+            modal.addEventListener('touchend', function(e) {
+                var diffX = e.changedTouches[0].screenX - touchStartX;
+                var diffY = e.changedTouches[0].screenY - touchStartY;
+                // Горизонтальный свайп > вертикального
+                if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+                    excursionNav(diffX < 0 ? 1 : -1);
+                }
+            }, {passive: true});
+        })();
+
+        // Кнопка "Наверх"
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+        function openMobileMenu() {
+            mobileMenuBtn.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            mobileMenuPanel.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            mobileMenuPanel.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Закрытие меню при клике на ссылку
+        document.querySelectorAll('.mobile-menu-panel a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Модальные окна
+        function openModal(id) {
+            document.getElementById('modal-' + id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById('modal-' + id).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Слайдер отзывов с автолистанием
+        let currentReviewSlide = 0;
+        const reviewsTrack = document.getElementById('reviewsTrack');
+        const reviewDots = document.querySelectorAll('.review-dot');
+        const totalReviewSlides = 8;
+
+        function showReviewSlide(index) {
+            currentReviewSlide = (index + totalReviewSlides) % totalReviewSlides;
+            reviewsTrack.style.transform = `translateX(-${currentReviewSlide * 100}%)`;
+            
+            reviewDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentReviewSlide);
+            });
+        }
+
+        // Автолистание каждые 5 секунд
+        setInterval(() => {
+            showReviewSlide(currentReviewSlide + 1);
+        }, 5000);
+
+        // Клик по точкам
+        reviewDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideIndex = parseInt(dot.getAttribute('data-slide'));
+                showReviewSlide(slideIndex);
+            });
+        });
+
+        // Свайп отзывов на мобильных
+        (function() {
+            let startX = 0, startY = 0, isDragging = false;
+            const threshold = 50;
+            reviewsTrack.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                isDragging = true;
+            }, {passive: true});
+            reviewsTrack.addEventListener('touchmove', function(e) {
+                if (!isDragging) return;
+                const dx = Math.abs(e.touches[0].clientX - startX);
+                const dy = Math.abs(e.touches[0].clientY - startY);
+                if (dx > dy) e.preventDefault();
+            }, {passive: false});
+            reviewsTrack.addEventListener('touchend', function(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                const endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) showReviewSlide(currentReviewSlide + 1);
+                    else showReviewSlide(currentReviewSlide - 1);
+                }
+            }, {passive: true});
+        })();
+
+        // Закрытие по клику на overlay
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // FAQ аккордеон
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // Плавный скролл для ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Анимация появления при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .master-card, .faq-item, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Отправка формы в Telegram @JZPMUstudio
+        // TODO: замените BOT_TOKEN и CHAT_ID на реальные значения
+        // 1. Создайте бота через @BotFather в Telegram → получите токен
+        // 2. Добавьте бота в чат с @JZPMUstudio или узнайте chat_id через https://api.telegram.org/bot<TOKEN>/getUpdates
+        const TG_BOT_TOKEN = '8013154084:AAH_7iFi5bzpYWzBdCPKl1AAGdPHGvjV25w';
+        const TG_CHAT_ID = '-5167932835';
+
+        async function submitToTelegram(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('formName').value.trim();
+            const phone = document.getElementById('formPhone').value.trim();
+            const service = document.getElementById('formService').value;
+            const comment = document.getElementById('formComment').value.trim();
+            const btn = document.getElementById('formSubmitBtn');
+
+            document.querySelectorAll('.form-error').forEach(el => el.textContent = '');
+            let hasError = false;
+            if (!document.getElementById('formConsent').checked) {
+                document.getElementById('formConsent').focus();
+                hasError = true;
+            }
+            if (!name) {
+                document.getElementById('formNameError').textContent = 'Введите ваше имя';
+                hasError = true;
+            }
+            if (!phone) {
+                document.getElementById('formPhoneError').textContent = 'Введите номер телефона';
+                hasError = true;
+            }
+            if (hasError) return false;
+
+            const text = `📋 *Новая заявка с сайта*\n\n👤 Имя: ${name}\n📱 Телефон: ${phone}${service ? `\n💅 Услуга: ${service}` : ''}${comment ? `\n💬 Комментарий: ${comment}` : ''}`;
+
+            btn.textContent = 'Отправка...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: TG_CHAT_ID,
+                        text: text,
+                        parse_mode: 'Markdown'
+                    })
+                });
+
+                if (response.ok) {
+                    ym(108553725, 'reachGoal', 'form_main');
+                    btn.textContent = '✓ Заявка отправлена!';
+                    btn.style.background = 'var(--accent)';
+                    document.getElementById('contactForm').reset();
+                    setTimeout(() => {
+                        btn.textContent = 'Отправить заявку';
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Ошибка отправки');
+                }
+            } catch (err) {
+                btn.textContent = 'Ошибка — попробуйте позже';
+                btn.style.background = '#c0392b';
+                setTimeout(() => {
+                    btn.textContent = 'Отправить заявку';
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            }
+
+            return false;
+        }
+
+        // Яндекс.Метрика: цели на клики
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a');
+            if (!link) return;
+            var href = link.getAttribute('href') || '';
+            if (href.indexOf('dkd.su') !== -1) ym(108553725, 'reachGoal', 'click_book');
+            else if (href.indexOf('t.me/') !== -1) ym(108553725, 'reachGoal', 'click_telegram');
+            else if (href.indexOf('wa.me/') !== -1) ym(108553725, 'reachGoal', 'click_whatsapp');
+            else if (href.indexOf('max.ru/') !== -1) ym(108553725, 'reachGoal', 'click_max');
+            else if (href.indexOf('tel:') === 0) ym(108553725, 'reachGoal', 'click_phone');
+        });
+    </script>
+
+</body>
+</html>
